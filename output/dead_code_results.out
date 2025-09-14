@@ -1,0 +1,8 @@
+
+--- Analysis Results ---
+
+[Dead Code] Else branch is unreachable at line 9
+[Dead Code] If branch is unreachable at line 15
+[Dead Code] Else branch is unreachable at line 31
+
+--- Analysis Completed ---

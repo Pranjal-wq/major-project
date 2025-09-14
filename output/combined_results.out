@@ -1,0 +1,52 @@
+
+===== Analyzing Python File: input\deadcode.py =====
+
+[Dead Code] Else branch unreachable at line 9
+[Dead Code] If branch unreachable at line 15
+[Dead Code] Else branch unreachable at line 31
+
+===== Analyzing Python File: input\inline.py =====
+
+[Dead Code] Variable 'val' assigned but never used
+[Dead Code] Variable 'x' assigned but never used
+[Dead Code] Variable 'y' assigned but never used
+[Dead Code] Variable 'c' assigned but never used
+[Dead Code] Variable 'a' assigned but never used
+[Dead Code] Variable 'b' assigned but never used
+[Dead Code] Variable 'z' assigned but never used
+[Inline Expansion] Constant expression at line 4: 12 * 4
+[Inline Expansion] Constant expression at line 7: 50 + 25
+[Inline Expansion] Constant expression at line 10: 9 ** 2
+[Inline Expansion] Constant expression at line 14: 2 * 5
+[Inline Expansion] Constant expression at line 17: 1 + 2
+[Inline Expansion] Constant expression at line 17: 3 + 4
+[Inline Expansion] Constant expression at line 20: 7 ** 2
+[Inline Expansion] Constant expression at line 20: 2 ** 2
+[Inline Expansion] Constant expression at line 23: 5 + 5
+[Inline Expansion] Constant expression at line 28: 2 * 3
+[Inline Expansion] Constant expression at line 28: 4 * 5
+[Inline Expansion] Constant expression at line 32: 2 + 3
+[Inline Expansion] Constant expression at line 38: 2 ** 2
+[Inline Expansion] Constant expression at line 43: 2 + 2
+[Inline Expansion] Constant expression at line 44: 3 * 3
+[Inline Expansion] Constant expression at line 49: 4 ** 2
+
+===== Analyzing Python File: input\opaque.py =====
+
+[Inline Expansion] Constant expression at line 5: 2 + 2
+[Inline Expansion] Constant expression at line 21: 2 * 3
+[Inline Expansion] Constant expression at line 26: 4 ** 2
+[Inline Expansion] Constant expression at line 39: 3 * 3
+[Opaque Predicate] Constant condition at line 16: if 100 == 100:
+    print('While loop always true', k)
+
+===== Analyzing File: input\sam.java =====
+
+[Dead Code] Unreachable branch at line 3: if (false) {
+[Inline Expansion] Constant expression at line 6: int y = 2 + 2;
+[Inline Expansion] Constant expression at line 7: if (3*3 == 9) {
+[Inline Expansion] Squaring detected at line 7: if (3*3 == 9) {
+[Dead Code] Possible code after return at line 11: System.out.println("Dead code");
+
+===== Completed: input\sam.java =====
+
