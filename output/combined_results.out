@@ -1,19 +1,44 @@
 
-===== Analyzing Python File: input\deadcode.py =====
+===== String Decryption =====
 
-[Dead Code] Else branch unreachable at line 9
-[Dead Code] If branch unreachable at line 15
-[Dead Code] Else branch unreachable at line 31
+input\controlFlow.py: [0] -> * (XOR-encrypted string detected and decrypted)
+input\controlFlow.py: [0] -> * (XOR-encrypted string detected and decrypted)
+input\nameIdentifier.py: {1,3} -> +) (XOR-encrypted string detected and decrypted)
+input\opaque.py: [4, 5] -> ./ (XOR-encrypted string detected and decrypted)
 
-===== Analyzing Python File: input\inline.py =====
 
-[Dead Code] Variable 'val' assigned but never used
-[Dead Code] Variable 'x' assigned but never used
-[Dead Code] Variable 'y' assigned but never used
-[Dead Code] Variable 'c' assigned but never used
-[Dead Code] Variable 'a' assigned but never used
-[Dead Code] Variable 'b' assigned but never used
-[Dead Code] Variable 'z' assigned but never used
+
+===== Identifier Cleaner =====
+
+input\controlFlow.py: Skipped due to syntax error: invalid syntax. Perhaps you forgot a comma? (<unknown>, line 46)
+input\deadcode.py: f1 -> func1 (Obfuscated identifier replaced (f1 → func1))
+input\deadcode.py: f2 -> func2 (Obfuscated identifier replaced (f2 → func2))
+input\inline.py: f1 -> func1 (Obfuscated identifier replaced (f1 → func1))
+input\nameIdentifier.py: Skipped due to syntax error: unmatched ')' (<unknown>, line 50)
+
+
+
+===== Control Flow =====
+
+input\deadcode.py: if False:
+    print("Dead branch")
+ ->  (Unreachable branch (condition always False))
+input\deadcode.py: if True:
+    print("Always runs")
+ -> print("Always runs")
+ (Always-true condition simplified (kept body, removed if header))
+input\deadcode.py: if True:
+    print("Run")
+ -> print("Run")
+ (Always-true condition simplified (kept body, removed if header))
+input\sam.java: if (false) { ->  (Unreachable branch (condition always false))
+
+
+
+===== Code Analysis =====
+
+[Python Analysis] Error in input\controlFlow.py: invalid syntax. Perhaps you forgot a comma? (<unknown>, line 46)
+[Python Analysis] Error in input\deadcode.py: invalid syntax (<unknown>, line 10)
 [Inline Expansion] Constant expression at line 4: 12 * 4
 [Inline Expansion] Constant expression at line 7: 50 + 25
 [Inline Expansion] Constant expression at line 10: 9 ** 2
@@ -30,23 +55,13 @@
 [Inline Expansion] Constant expression at line 43: 2 + 2
 [Inline Expansion] Constant expression at line 44: 3 * 3
 [Inline Expansion] Constant expression at line 49: 4 ** 2
-
-===== Analyzing Python File: input\opaque.py =====
-
+[Python Analysis] Error in input\nameIdentifier.py: unmatched ')' (<unknown>, line 50)
 [Inline Expansion] Constant expression at line 5: 2 + 2
 [Inline Expansion] Constant expression at line 21: 2 * 3
 [Inline Expansion] Constant expression at line 26: 4 ** 2
 [Inline Expansion] Constant expression at line 39: 3 * 3
 [Opaque Predicate] Constant condition at line 16: if 100 == 100:
     print('While loop always true', k)
-
-===== Analyzing File: input\sam.java =====
-
-[Dead Code] Unreachable branch at line 3: if (false) {
 [Inline Expansion] Constant expression at line 6: int y = 2 + 2;
 [Inline Expansion] Constant expression at line 7: if (3*3 == 9) {
-[Inline Expansion] Squaring detected at line 7: if (3*3 == 9) {
-[Dead Code] Possible code after return at line 11: System.out.println("Dead code");
-
-===== Completed: input\sam.java =====
 
