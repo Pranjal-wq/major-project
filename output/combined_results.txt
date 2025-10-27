@@ -1,66 +1,30 @@
 Analysis summary:
-- scanned files: 125
-- total findings: 1082
+- scanned files: 13
+- total findings: 148
 
 Per-file summary (first 40 entries):
+- input\00000021.py : 13 findings
 - input\api_redirection.py : 7 findings
-- input\controlFlow.py : 8 findings
+- input\controlFlow.py : 5 findings
 - input\controlflow_flattening.py : 9 findings
-- input\deadCode.py : 20 findings
+- input\deadcode.py : 17 findings
 - input\dynamic_loading.py : 6 findings
 - input\inlineExpansion.py : 17 findings
 - input\instruction_substitution.py : 13 findings
 - input\junkcode.py : 18 findings
 - input\mixed_language.py : 5 findings
-- input\nameIdentifier.py : 11 findings
-- input\opaque_predicate.py : 28 findings
-- input\stringEncryption.py : 5 findings
-- input\sources\00\00000000.java : 44 findings
-- input\sources\01\00000001.java : 35 findings
-- input\sources\02\00000002.java : 15 findings
-- input\sources\03\00000003.java : 6 findings
-- input\sources\04\00000004.java : 40 findings
-- input\sources\05\00000005.java : 16 findings
-- input\sources\06\00000006.java : 14 findings
-- input\sources\07\00000007.java : 7 findings
-- input\sources\08\00000008.java : 13 findings
-- input\sources\09\00000009.java : 4 findings
-- input\sources\0a\0000000a.java : 43 findings
-- input\sources\0b\0000000b.java : 4 findings
-- input\sources\0c\0000000c.java : 7 findings
-- input\sources\0d\0000000d.java : 4 findings
-- input\sources\0e\0000000e.java : 4 findings
-- input\sources\0f\0000000f.java : 3 findings
-- input\sources\10\00000010.java : 3 findings
-- input\sources\11\00000011.java : 4 findings
-- input\sources\12\00000012.java : 4 findings
-- input\sources\13\00000013.java : 5 findings
-- input\sources\14\00000014.java : 5 findings
-- input\sources\15\00000015.java : 3 findings
-- input\sources\16\00000016.java : 5 findings
-- input\sources\17\00000017.java : 5 findings
-- input\sources\18\00000018.java : 4 findings
-- input\sources\19\00000019.java : 19 findings
-- input\sources\1a\0000001a.java : 4 findings
-- input\sources\1b\0000001b.java : 3 findings
+- input\nameIdentifier.py : 9 findings
+- input\opaque_predicate.py : 23 findings
+- input\stringEncryption.py : 6 findings
 
 ===== String Encryption =====
 
-input\controlFlow.py: [0] -> * (XOR-encrypted string detected and decrypted)
-input\controlFlow.py: [0] -> * (XOR-encrypted string detected and decrypted)
-input\deadCode.py: [0] -> * (XOR-encrypted string detected and decrypted)
-input\deadCode.py: [0] -> * (XOR-encrypted string detected and decrypted)
-input\nameIdentifier.py: {1,3} -> +) (XOR-encrypted string detected and decrypted)
-input\opaque_predicate.py: [4, 5] -> ./ (XOR-encrypted string detected and decrypted)
-input\opaque_predicate.py: [0] -> * (XOR-encrypted string detected and decrypted)
-input\opaque_predicate.py: [0] -> * (XOR-encrypted string detected and decrypted)
+input\stringEncryption.py: obf-line: # Match only well-formed numeric arrays like [65, 66, 67] -> deobf-line: # Match only well-formed numeric arrays like "khi" (XOR-encrypted string detected and decrypted)
 
 
 
 ===== Identifier Cleaner =====
 
-input\controlFlow.py: Error - invalid syntax. Perhaps you forgot a comma? (<unknown>, line 46)
-input\deadCode.py: Error - invalid syntax. Perhaps you forgot a comma? (<unknown>, line 153)
 input\junkcode.py: m1 -> var1 (Obfuscated identifier replaced (m1 → var1))
 input\junkcode.py: m2 -> var2 (Obfuscated identifier replaced (m2 → var2))
 input\junkcode.py: m1 -> var1 (Obfuscated identifier replaced (m1 → var1))
@@ -73,520 +37,59 @@ input\junkcode.py: m1 -> var1 (Obfuscated identifier replaced (m1 → var1))
 input\junkcode.py: m2 -> var2 (Obfuscated identifier replaced (m2 → var2))
 input\junkcode.py: m1 -> var1 (Obfuscated identifier replaced (m1 → var1))
 input\junkcode.py: m2 -> var2 (Obfuscated identifier replaced (m2 → var2))
-input\nameIdentifier.py: Error - unmatched ')' (<unknown>, line 50)
-input\opaque_predicate.py: Error - invalid syntax (<unknown>, line 100)
-input\sources\00\00000000.java: C0 -> Class1 (Obfuscated identifier replaced (C0 → Class1))
-input\sources\00\00000000.java: C0038a -> Class2 (Obfuscated identifier replaced (C0038a → Class2))
-input\sources\00\00000000.java: f1215e -> func4 (Obfuscated identifier replaced (f1215e → func4))
-input\sources\00\00000000.java: C0038a -> Class2 (Obfuscated identifier replaced (C0038a → Class2))
-input\sources\00\00000000.java: f1216f -> func6 (Obfuscated identifier replaced (f1216f → func6))
-input\sources\00\00000000.java: f1217a -> func7 (Obfuscated identifier replaced (f1217a → func7))
-input\sources\00\00000000.java: f1218b -> func2 (Obfuscated identifier replaced (f1218b → func2))
-input\sources\00\00000000.java: f1219c -> func8 (Obfuscated identifier replaced (f1219c → func8))
-input\sources\00\00000000.java: f1220d -> func3 (Obfuscated identifier replaced (f1220d → func3))
-input\sources\00\00000000.java: C0 -> Class1 (Obfuscated identifier replaced (C0 → Class1))
-input\sources\00\00000000.java: C0038a -> Class2 (Obfuscated identifier replaced (C0038a → Class2))
-input\sources\00\00000000.java: C0038a -> Class2 (Obfuscated identifier replaced (C0038a → Class2))
-input\sources\00\00000000.java: f1216f -> func6 (Obfuscated identifier replaced (f1216f → func6))
-input\sources\00\00000000.java: f1216f -> func6 (Obfuscated identifier replaced (f1216f → func6))
-input\sources\00\00000000.java: C0038a -> Class2 (Obfuscated identifier replaced (C0038a → Class2))
-input\sources\00\00000000.java: z8 -> func1 (Obfuscated identifier replaced (z8 → func1))
-input\sources\00\00000000.java: f1217a -> func7 (Obfuscated identifier replaced (f1217a → func7))
-input\sources\00\00000000.java: z8 -> func1 (Obfuscated identifier replaced (z8 → func1))
-input\sources\00\00000000.java: f1218b -> func2 (Obfuscated identifier replaced (f1218b → func2))
-input\sources\00\00000000.java: C0038a -> Class2 (Obfuscated identifier replaced (C0038a → Class2))
-input\sources\00\00000000.java: c0038a -> func10 (Obfuscated identifier replaced (c0038a → func10))
-input\sources\00\00000000.java: f1215e -> func4 (Obfuscated identifier replaced (f1215e → func4))
-input\sources\00\00000000.java: f1219c -> func8 (Obfuscated identifier replaced (f1219c → func8))
-input\sources\00\00000000.java: c0038a -> func10 (Obfuscated identifier replaced (c0038a → func10))
-input\sources\00\00000000.java: z8 -> func1 (Obfuscated identifier replaced (z8 → func1))
-input\sources\00\00000000.java: i9 -> func5 (Obfuscated identifier replaced (i9 → func5))
-input\sources\00\00000000.java: i9 -> func5 (Obfuscated identifier replaced (i9 → func5))
-input\sources\00\00000000.java: z8 -> func1 (Obfuscated identifier replaced (z8 → func1))
-input\sources\00\00000000.java: f1217a -> func7 (Obfuscated identifier replaced (f1217a → func7))
-input\sources\00\00000000.java: z8 -> func1 (Obfuscated identifier replaced (z8 → func1))
-input\sources\00\00000000.java: z8 -> func1 (Obfuscated identifier replaced (z8 → func1))
-input\sources\00\00000000.java: f1219c -> func8 (Obfuscated identifier replaced (f1219c → func8))
-input\sources\00\00000000.java: z8 -> func1 (Obfuscated identifier replaced (z8 → func1))
-input\sources\00\00000000.java: f1218b -> func2 (Obfuscated identifier replaced (f1218b → func2))
-input\sources\00\00000000.java: f1218b -> func2 (Obfuscated identifier replaced (f1218b → func2))
-input\sources\00\00000000.java: f1220d -> func3 (Obfuscated identifier replaced (f1220d → func3))
-input\sources\00\00000000.java: e9 -> func9 (Obfuscated identifier replaced (e9 → func9))
-input\sources\00\00000000.java: f1220d -> func3 (Obfuscated identifier replaced (f1220d → func3))
-input\sources\00\00000000.java: e9 -> func9 (Obfuscated identifier replaced (e9 → func9))
-input\sources\00\00000000.java: f1220d -> func3 (Obfuscated identifier replaced (f1220d → func3))
-input\sources\00\00000000.java: f1219c -> func8 (Obfuscated identifier replaced (f1219c → func8))
-input\sources\01\00000001.java: A5 -> Class1 (Obfuscated identifier replaced (A5 → Class1))
-input\sources\01\00000001.java: f236a -> func1 (Obfuscated identifier replaced (f236a → func1))
-input\sources\01\00000001.java: f237b -> func4 (Obfuscated identifier replaced (f237b → func4))
-input\sources\01\00000001.java: i9 -> func5 (Obfuscated identifier replaced (i9 → func5))
-input\sources\01\00000001.java: i9 -> func5 (Obfuscated identifier replaced (i9 → func5))
-input\sources\01\00000001.java: j9 -> func3 (Obfuscated identifier replaced (j9 → func3))
-input\sources\01\00000001.java: j9 -> func3 (Obfuscated identifier replaced (j9 → func3))
-input\sources\01\00000001.java: f236a -> func1 (Obfuscated identifier replaced (f236a → func1))
-input\sources\01\00000001.java: f237b -> func4 (Obfuscated identifier replaced (f237b → func4))
-input\sources\01\00000001.java: f237b -> func4 (Obfuscated identifier replaced (f237b → func4))
-input\sources\01\00000001.java: f236a -> func1 (Obfuscated identifier replaced (f236a → func1))
-input\sources\01\00000001.java: f236a -> func1 (Obfuscated identifier replaced (f236a → func1))
-input\sources\01\00000001.java: f237b -> func4 (Obfuscated identifier replaced (f237b → func4))
-input\sources\01\00000001.java: i9 -> func5 (Obfuscated identifier replaced (i9 → func5))
-input\sources\01\00000001.java: f236a -> func1 (Obfuscated identifier replaced (f236a → func1))
-input\sources\01\00000001.java: f237b -> func4 (Obfuscated identifier replaced (f237b → func4))
-input\sources\01\00000001.java: j9 -> func3 (Obfuscated identifier replaced (j9 → func3))
-input\sources\01\00000001.java: j10 -> func2 (Obfuscated identifier replaced (j10 → func2))
-input\sources\01\00000001.java: f236a -> func1 (Obfuscated identifier replaced (f236a → func1))
-input\sources\01\00000001.java: j9 -> func3 (Obfuscated identifier replaced (j9 → func3))
-input\sources\01\00000001.java: f237b -> func4 (Obfuscated identifier replaced (f237b → func4))
-input\sources\01\00000001.java: j10 -> func2 (Obfuscated identifier replaced (j10 → func2))
-input\sources\04\00000004.java: A5 -> Class1 (Obfuscated identifier replaced (A5 → Class1))
-input\sources\04\00000004.java: f229b -> func8 (Obfuscated identifier replaced (f229b → func8))
-input\sources\04\00000004.java: f230c -> func3 (Obfuscated identifier replaced (f230c → func3))
-input\sources\04\00000004.java: A5 -> Class1 (Obfuscated identifier replaced (A5 → Class1))
-input\sources\04\00000004.java: f231d -> func1 (Obfuscated identifier replaced (f231d → func1))
-input\sources\04\00000004.java: A5 -> Class1 (Obfuscated identifier replaced (A5 → Class1))
-input\sources\04\00000004.java: f232e -> func7 (Obfuscated identifier replaced (f232e → func7))
-input\sources\04\00000004.java: A5 -> Class1 (Obfuscated identifier replaced (A5 → Class1))
-input\sources\04\00000004.java: f233f -> func2 (Obfuscated identifier replaced (f233f → func2))
-input\sources\04\00000004.java: A5 -> Class1 (Obfuscated identifier replaced (A5 → Class1))
-input\sources\04\00000004.java: f234m -> func4 (Obfuscated identifier replaced (f234m → func4))
-input\sources\04\00000004.java: f235a -> func5 (Obfuscated identifier replaced (f235a → func5))
-input\sources\04\00000004.java: i9 -> func9 (Obfuscated identifier replaced (i9 → func9))
-input\sources\04\00000004.java: j9 -> func6 (Obfuscated identifier replaced (j9 → func6))
-input\sources\04\00000004.java: i9 -> func9 (Obfuscated identifier replaced (i9 → func9))
-input\sources\04\00000004.java: j9 -> func6 (Obfuscated identifier replaced (j9 → func6))
-input\sources\04\00000004.java: i9 -> func9 (Obfuscated identifier replaced (i9 → func9))
-input\sources\04\00000004.java: j9 -> func6 (Obfuscated identifier replaced (j9 → func6))
-input\sources\04\00000004.java: f235a -> func5 (Obfuscated identifier replaced (f235a → func5))
-input\sources\04\00000004.java: j9 -> func6 (Obfuscated identifier replaced (j9 → func6))
-input\sources\04\00000004.java: f229b -> func8 (Obfuscated identifier replaced (f229b → func8))
-input\sources\04\00000004.java: f230c -> func3 (Obfuscated identifier replaced (f230c → func3))
-input\sources\04\00000004.java: f231d -> func1 (Obfuscated identifier replaced (f231d → func1))
-input\sources\04\00000004.java: f232e -> func7 (Obfuscated identifier replaced (f232e → func7))
-input\sources\04\00000004.java: f233f -> func2 (Obfuscated identifier replaced (f233f → func2))
-input\sources\04\00000004.java: f234m -> func4 (Obfuscated identifier replaced (f234m → func4))
-input\sources\04\00000004.java: j9 -> func6 (Obfuscated identifier replaced (j9 → func6))
-input\sources\04\00000004.java: j9 -> func6 (Obfuscated identifier replaced (j9 → func6))
-input\sources\04\00000004.java: f235a -> func5 (Obfuscated identifier replaced (f235a → func5))
-input\sources\04\00000004.java: f232e -> func7 (Obfuscated identifier replaced (f232e → func7))
-input\sources\04\00000004.java: f235a -> func5 (Obfuscated identifier replaced (f235a → func5))
-input\sources\04\00000004.java: i9 -> func9 (Obfuscated identifier replaced (i9 → func9))
-input\sources\04\00000004.java: j9 -> func6 (Obfuscated identifier replaced (j9 → func6))
-input\sources\04\00000004.java: i9 -> func9 (Obfuscated identifier replaced (i9 → func9))
-input\sources\04\00000004.java: j9 -> func6 (Obfuscated identifier replaced (j9 → func6))
-input\sources\05\00000005.java: A5 -> Class1 (Obfuscated identifier replaced (A5 → Class1))
-input\sources\05\00000005.java: f213a -> func3 (Obfuscated identifier replaced (f213a → func3))
-input\sources\05\00000005.java: f214b -> func2 (Obfuscated identifier replaced (f214b → func2))
-input\sources\05\00000005.java: f215c -> func1 (Obfuscated identifier replaced (f215c → func1))
-input\sources\05\00000005.java: f214b -> func2 (Obfuscated identifier replaced (f214b → func2))
-input\sources\05\00000005.java: f215c -> func1 (Obfuscated identifier replaced (f215c → func1))
-input\sources\05\00000005.java: f214b -> func2 (Obfuscated identifier replaced (f214b → func2))
-input\sources\05\00000005.java: A5 -> Class1 (Obfuscated identifier replaced (A5 → Class1))
-input\sources\05\00000005.java: f213a -> func3 (Obfuscated identifier replaced (f213a → func3))
-input\sources\05\00000005.java: f215c -> func1 (Obfuscated identifier replaced (f215c → func1))
-input\sources\09\00000009.java: D6 -> Class1 (Obfuscated identifier replaced (D6 → Class1))
-input\sources\09\00000009.java: v0 -> func1 (Obfuscated identifier replaced (v0 → func1))
-input\sources\0b\0000000b.java: D6 -> Class1 (Obfuscated identifier replaced (D6 → Class1))
-input\sources\0b\0000000b.java: i9 -> func1 (Obfuscated identifier replaced (i9 → func1))
-input\sources\0d\0000000d.java: E6 -> Class1 (Obfuscated identifier replaced (E6 → Class1))
-input\sources\0d\0000000d.java: r0 -> func1 (Obfuscated identifier replaced (r0 → func1))
-input\sources\0e\0000000e.java: E6 -> Class2 (Obfuscated identifier replaced (E6 → Class2))
-input\sources\0e\0000000e.java: N0 -> Class1 (Obfuscated identifier replaced (N0 → Class1))
-input\sources\0f\0000000f.java: E6 -> Class1 (Obfuscated identifier replaced (E6 → Class1))
-input\sources\10\00000010.java: E6 -> Class1 (Obfuscated identifier replaced (E6 → Class1))
-input\sources\11\00000011.java: E6 -> Class1 (Obfuscated identifier replaced (E6 → Class1))
-input\sources\11\00000011.java: i9 -> func1 (Obfuscated identifier replaced (i9 → func1))
-input\sources\12\00000012.java: E6 -> Class1 (Obfuscated identifier replaced (E6 → Class1))
-input\sources\12\00000012.java: i9 -> func1 (Obfuscated identifier replaced (i9 → func1))
-input\sources\13\00000013.java: E6 -> Class2 (Obfuscated identifier replaced (E6 → Class2))
-input\sources\13\00000013.java: G0 -> Class1 (Obfuscated identifier replaced (G0 → Class1))
-input\sources\13\00000013.java: i9 -> func1 (Obfuscated identifier replaced (i9 → func1))
-input\sources\14\00000014.java: E6 -> Class1 (Obfuscated identifier replaced (E6 → Class1))
-input\sources\14\00000014.java: p0 -> func1 (Obfuscated identifier replaced (p0 → func1))
-input\sources\14\00000014.java: i9 -> func2 (Obfuscated identifier replaced (i9 → func2))
-input\sources\15\00000015.java: D4 -> Class1 (Obfuscated identifier replaced (D4 → Class1))
-input\sources\16\00000016.java: E6 -> Class2 (Obfuscated identifier replaced (E6 → Class2))
-input\sources\16\00000016.java: I0 -> Class1 (Obfuscated identifier replaced (I0 → Class1))
-input\sources\16\00000016.java: i9 -> func1 (Obfuscated identifier replaced (i9 → func1))
-input\sources\17\00000017.java: E6 -> Class1 (Obfuscated identifier replaced (E6 → Class1))
-input\sources\17\00000017.java: x0 -> func1 (Obfuscated identifier replaced (x0 → func1))
-input\sources\17\00000017.java: i9 -> func2 (Obfuscated identifier replaced (i9 → func2))
-input\sources\18\00000018.java: E6 -> Class1 (Obfuscated identifier replaced (E6 → Class1))
-input\sources\18\00000018.java: i9 -> func1 (Obfuscated identifier replaced (i9 → func1))
-input\sources\19\00000019.java: E6 -> Class1 (Obfuscated identifier replaced (E6 → Class1))
-input\sources\19\00000019.java: i9 -> func1 (Obfuscated identifier replaced (i9 → func1))
-input\sources\19\00000019.java: i9 -> func1 (Obfuscated identifier replaced (i9 → func1))
-input\sources\19\00000019.java: i9 -> func1 (Obfuscated identifier replaced (i9 → func1))
-input\sources\19\00000019.java: i9 -> func1 (Obfuscated identifier replaced (i9 → func1))
-input\sources\19\00000019.java: i9 -> func1 (Obfuscated identifier replaced (i9 → func1))
-input\sources\19\00000019.java: i9 -> func1 (Obfuscated identifier replaced (i9 → func1))
-input\sources\19\00000019.java: i9 -> func1 (Obfuscated identifier replaced (i9 → func1))
-input\sources\19\00000019.java: i9 -> func1 (Obfuscated identifier replaced (i9 → func1))
-input\sources\19\00000019.java: i9 -> func1 (Obfuscated identifier replaced (i9 → func1))
-input\sources\19\00000019.java: i9 -> func1 (Obfuscated identifier replaced (i9 → func1))
-input\sources\19\00000019.java: i9 -> func1 (Obfuscated identifier replaced (i9 → func1))
-input\sources\19\00000019.java: i9 -> func1 (Obfuscated identifier replaced (i9 → func1))
-input\sources\19\00000019.java: i9 -> func1 (Obfuscated identifier replaced (i9 → func1))
-input\sources\19\00000019.java: i9 -> func1 (Obfuscated identifier replaced (i9 → func1))
-input\sources\19\00000019.java: i9 -> func1 (Obfuscated identifier replaced (i9 → func1))
-input\sources\19\00000019.java: i9 -> func1 (Obfuscated identifier replaced (i9 → func1))
-input\sources\1a\0000001a.java: E6 -> Class1 (Obfuscated identifier replaced (E6 → Class1))
-input\sources\1a\0000001a.java: i9 -> func1 (Obfuscated identifier replaced (i9 → func1))
-input\sources\1b\0000001b.java: E6 -> Class1 (Obfuscated identifier replaced (E6 → Class1))
-input\sources\1c\0000001c.java: A5 -> Class1 (Obfuscated identifier replaced (A5 → Class1))
-input\sources\1c\0000001c.java: f202a -> func1 (Obfuscated identifier replaced (f202a → func1))
-input\sources\1c\0000001c.java: f202a -> func1 (Obfuscated identifier replaced (f202a → func1))
-input\sources\1c\0000001c.java: f202a -> func1 (Obfuscated identifier replaced (f202a → func1))
-input\sources\1d\0000001d.java: E6 -> Class1 (Obfuscated identifier replaced (E6 → Class1))
-input\sources\1d\0000001d.java: i9 -> func1 (Obfuscated identifier replaced (i9 → func1))
-input\sources\1e\0000001e.java: E6 -> Class1 (Obfuscated identifier replaced (E6 → Class1))
-input\sources\1e\0000001e.java: i9 -> func1 (Obfuscated identifier replaced (i9 → func1))
-input\sources\1f\0000001f.java: E6 -> Class1 (Obfuscated identifier replaced (E6 → Class1))
-input\sources\1f\0000001f.java: a0 -> func2 (Obfuscated identifier replaced (a0 → func2))
-input\sources\1f\0000001f.java: i9 -> func1 (Obfuscated identifier replaced (i9 → func1))
-input\sources\20\00000020.java: E6 -> Class1 (Obfuscated identifier replaced (E6 → Class1))
-input\sources\21\00000021.java: E6 -> Class2 (Obfuscated identifier replaced (E6 → Class2))
-input\sources\21\00000021.java: H0 -> Class1 (Obfuscated identifier replaced (H0 → Class1))
-input\sources\21\00000021.java: i9 -> func2 (Obfuscated identifier replaced (i9 → func2))
-input\sources\21\00000021.java: i0 -> func1 (Obfuscated identifier replaced (i0 → func1))
-input\sources\21\00000021.java: i9 -> func2 (Obfuscated identifier replaced (i9 → func2))
-input\sources\22\00000022.java: E6 -> Class2 (Obfuscated identifier replaced (E6 → Class2))
-input\sources\22\00000022.java: K0 -> Class1 (Obfuscated identifier replaced (K0 → Class1))
-input\sources\22\00000022.java: i9 -> func1 (Obfuscated identifier replaced (i9 → func1))
-input\sources\23\00000023.java: E6 -> Class1 (Obfuscated identifier replaced (E6 → Class1))
-input\sources\23\00000023.java: i9 -> func2 (Obfuscated identifier replaced (i9 → func2))
-input\sources\23\00000023.java: i10 -> func1 (Obfuscated identifier replaced (i10 → func1))
-input\sources\24\00000024.java: E6 -> Class1 (Obfuscated identifier replaced (E6 → Class1))
-input\sources\25\00000025.java: f9 -> func4 (Obfuscated identifier replaced (f9 → func4))
-input\sources\25\00000025.java: f10 -> func9 (Obfuscated identifier replaced (f10 → func9))
-input\sources\25\00000025.java: f11 -> func1 (Obfuscated identifier replaced (f11 → func1))
-input\sources\25\00000025.java: f9 -> func4 (Obfuscated identifier replaced (f9 → func4))
-input\sources\25\00000025.java: f10 -> func9 (Obfuscated identifier replaced (f10 → func9))
-input\sources\25\00000025.java: f10 -> func9 (Obfuscated identifier replaced (f10 → func9))
-input\sources\25\00000025.java: f9 -> func4 (Obfuscated identifier replaced (f9 → func4))
-input\sources\25\00000025.java: f11 -> func1 (Obfuscated identifier replaced (f11 → func1))
-input\sources\25\00000025.java: f11 -> func1 (Obfuscated identifier replaced (f11 → func1))
-input\sources\25\00000025.java: f9 -> func4 (Obfuscated identifier replaced (f9 → func4))
-input\sources\25\00000025.java: i9 -> func8 (Obfuscated identifier replaced (i9 → func8))
-input\sources\25\00000025.java: i10 -> func2 (Obfuscated identifier replaced (i10 → func2))
-input\sources\25\00000025.java: i11 -> func6 (Obfuscated identifier replaced (i11 → func6))
-input\sources\25\00000025.java: i9 -> func8 (Obfuscated identifier replaced (i9 → func8))
-input\sources\25\00000025.java: i10 -> func2 (Obfuscated identifier replaced (i10 → func2))
-input\sources\25\00000025.java: i10 -> func2 (Obfuscated identifier replaced (i10 → func2))
-input\sources\25\00000025.java: i9 -> func8 (Obfuscated identifier replaced (i9 → func8))
-input\sources\25\00000025.java: i11 -> func6 (Obfuscated identifier replaced (i11 → func6))
-input\sources\25\00000025.java: i11 -> func6 (Obfuscated identifier replaced (i11 → func6))
-input\sources\25\00000025.java: i9 -> func8 (Obfuscated identifier replaced (i9 → func8))
-input\sources\25\00000025.java: j9 -> func7 (Obfuscated identifier replaced (j9 → func7))
-input\sources\25\00000025.java: j10 -> func3 (Obfuscated identifier replaced (j10 → func3))
-input\sources\25\00000025.java: j11 -> func5 (Obfuscated identifier replaced (j11 → func5))
-input\sources\25\00000025.java: j9 -> func7 (Obfuscated identifier replaced (j9 → func7))
-input\sources\25\00000025.java: j10 -> func3 (Obfuscated identifier replaced (j10 → func3))
-input\sources\25\00000025.java: j10 -> func3 (Obfuscated identifier replaced (j10 → func3))
-input\sources\25\00000025.java: j9 -> func7 (Obfuscated identifier replaced (j9 → func7))
-input\sources\25\00000025.java: j11 -> func5 (Obfuscated identifier replaced (j11 → func5))
-input\sources\25\00000025.java: j11 -> func5 (Obfuscated identifier replaced (j11 → func5))
-input\sources\25\00000025.java: j9 -> func7 (Obfuscated identifier replaced (j9 → func7))
-input\sources\26\00000026.java: A5 -> Class1 (Obfuscated identifier replaced (A5 → Class1))
-input\sources\26\00000026.java: f210a -> func1 (Obfuscated identifier replaced (f210a → func1))
-input\sources\26\00000026.java: f210a -> func1 (Obfuscated identifier replaced (f210a → func1))
-input\sources\26\00000026.java: f210a -> func1 (Obfuscated identifier replaced (f210a → func1))
-input\sources\28\00000028.java: F0 -> Class1 (Obfuscated identifier replaced (F0 → Class1))
-input\sources\29\00000029.java: F1 -> Class1 (Obfuscated identifier replaced (F1 → Class1))
-input\sources\29\00000029.java: i9 -> func2 (Obfuscated identifier replaced (i9 → func2))
-input\sources\29\00000029.java: i10 -> func1 (Obfuscated identifier replaced (i10 → func1))
-input\sources\2a\0000002a.java: f1212g -> func2 (Obfuscated identifier replaced (f1212g → func2))
-input\sources\2a\0000002a.java: C0037a -> Class1 (Obfuscated identifier replaced (C0037a → Class1))
-input\sources\2a\0000002a.java: f1213a -> func1 (Obfuscated identifier replaced (f1213a → func1))
-input\sources\2a\0000002a.java: C0037a -> Class1 (Obfuscated identifier replaced (C0037a → Class1))
-input\sources\2a\0000002a.java: f1213a -> func1 (Obfuscated identifier replaced (f1213a → func1))
-input\sources\2a\0000002a.java: f1213a -> func1 (Obfuscated identifier replaced (f1213a → func1))
-input\sources\2a\0000002a.java: f1212g -> func2 (Obfuscated identifier replaced (f1212g → func2))
-input\sources\2a\0000002a.java: C0037a -> Class1 (Obfuscated identifier replaced (C0037a → Class1))
-input\sources\2b\0000002b.java: F2 -> Class1 (Obfuscated identifier replaced (F2 → Class1))
-input\sources\2c\0000002c.java: F2 -> Class1 (Obfuscated identifier replaced (F2 → Class1))
-input\sources\2e\0000002e.java: E0 -> Class1 (Obfuscated identifier replaced (E0 → Class1))
-input\sources\2f\0000002f.java: B1 -> Class1 (Obfuscated identifier replaced (B1 → Class1))
-input\sources\30\00000030.java: B1 -> Class1 (Obfuscated identifier replaced (B1 → Class1))
-input\sources\31\00000031.java: F3 -> Class1 (Obfuscated identifier replaced (F3 → Class1))
-input\sources\32\00000032.java: E0 -> Class1 (Obfuscated identifier replaced (E0 → Class1))
-input\sources\33\00000033.java: B3 -> Class1 (Obfuscated identifier replaced (B3 → Class1))
-input\sources\34\00000034.java: E1 -> Class1 (Obfuscated identifier replaced (E1 → Class1))
-input\sources\35\00000035.java: F4 -> Class1 (Obfuscated identifier replaced (F4 → Class1))
-input\sources\36\00000036.java: B3 -> Class1 (Obfuscated identifier replaced (B3 → Class1))
-input\sources\37\00000037.java: F4 -> Class1 (Obfuscated identifier replaced (F4 → Class1))
-input\sources\38\00000038.java: I0 -> Class1 (Obfuscated identifier replaced (I0 → Class1))
-input\sources\38\00000038.java: I0 -> Class1 (Obfuscated identifier replaced (I0 → Class1))
-input\sources\39\00000039.java: F4 -> Class1 (Obfuscated identifier replaced (F4 → Class1))
-input\sources\3c\0000003c.java: B6 -> Class1 (Obfuscated identifier replaced (B6 → Class1))
-input\sources\3d\0000003d.java: F4 -> Class1 (Obfuscated identifier replaced (F4 → Class1))
-input\sources\41\00000041.java: I0 -> Class1 (Obfuscated identifier replaced (I0 → Class1))
-input\sources\43\00000043.java: C2 -> Class1 (Obfuscated identifier replaced (C2 → Class1))
-input\sources\43\00000043.java: t8 -> func1 (Obfuscated identifier replaced (t8 → func1))
-input\sources\43\00000043.java: t8 -> func1 (Obfuscated identifier replaced (t8 → func1))
-input\sources\43\00000043.java: t8 -> func1 (Obfuscated identifier replaced (t8 → func1))
-input\sources\43\00000043.java: t8 -> func1 (Obfuscated identifier replaced (t8 → func1))
-input\sources\43\00000043.java: t8 -> func1 (Obfuscated identifier replaced (t8 → func1))
-input\sources\43\00000043.java: t8 -> func1 (Obfuscated identifier replaced (t8 → func1))
-input\sources\43\00000043.java: t8 -> func1 (Obfuscated identifier replaced (t8 → func1))
-input\sources\43\00000043.java: t8 -> func1 (Obfuscated identifier replaced (t8 → func1))
-input\sources\43\00000043.java: t8 -> func1 (Obfuscated identifier replaced (t8 → func1))
-input\sources\43\00000043.java: t8 -> func1 (Obfuscated identifier replaced (t8 → func1))
-input\sources\43\00000043.java: t8 -> func1 (Obfuscated identifier replaced (t8 → func1))
-input\sources\46\00000046.java: I0 -> Class1 (Obfuscated identifier replaced (I0 → Class1))
-input\sources\49\00000049.java: B6 -> Class1 (Obfuscated identifier replaced (B6 → Class1))
-input\sources\4a\0000004a.java: E2 -> Class1 (Obfuscated identifier replaced (E2 → Class1))
-input\sources\4a\0000004a.java: str2 -> func2 (Obfuscated identifier replaced (str2 → func2))
-input\sources\4a\0000004a.java: str3 -> func1 (Obfuscated identifier replaced (str3 → func1))
-input\sources\4a\0000004a.java: str2 -> func2 (Obfuscated identifier replaced (str2 → func2))
-input\sources\4a\0000004a.java: str3 -> func1 (Obfuscated identifier replaced (str3 → func1))
-input\sources\4a\0000004a.java: str3 -> func1 (Obfuscated identifier replaced (str3 → func1))
-input\sources\4a\0000004a.java: str3 -> func1 (Obfuscated identifier replaced (str3 → func1))
-input\sources\4a\0000004a.java: str2 -> func2 (Obfuscated identifier replaced (str2 → func2))
-input\sources\4a\0000004a.java: e9 -> func3 (Obfuscated identifier replaced (e9 → func3))
-input\sources\4a\0000004a.java: e9 -> func3 (Obfuscated identifier replaced (e9 → func3))
-input\sources\4a\0000004a.java: e9 -> func3 (Obfuscated identifier replaced (e9 → func3))
-input\sources\4a\0000004a.java: str2 -> func2 (Obfuscated identifier replaced (str2 → func2))
-input\sources\4a\0000004a.java: str2 -> func2 (Obfuscated identifier replaced (str2 → func2))
-input\sources\4a\0000004a.java: e9 -> func3 (Obfuscated identifier replaced (e9 → func3))
-input\sources\4a\0000004a.java: e9 -> func3 (Obfuscated identifier replaced (e9 → func3))
-input\sources\4a\0000004a.java: e9 -> func3 (Obfuscated identifier replaced (e9 → func3))
-input\sources\4a\0000004a.java: str2 -> func2 (Obfuscated identifier replaced (str2 → func2))
-input\sources\4a\0000004a.java: str2 -> func2 (Obfuscated identifier replaced (str2 → func2))
-input\sources\4a\0000004a.java: e9 -> func3 (Obfuscated identifier replaced (e9 → func3))
-input\sources\4a\0000004a.java: e9 -> func3 (Obfuscated identifier replaced (e9 → func3))
-input\sources\4a\0000004a.java: e9 -> func3 (Obfuscated identifier replaced (e9 → func3))
-input\sources\4a\0000004a.java: str2 -> func2 (Obfuscated identifier replaced (str2 → func2))
-input\sources\4a\0000004a.java: str2 -> func2 (Obfuscated identifier replaced (str2 → func2))
-input\sources\4a\0000004a.java: e9 -> func3 (Obfuscated identifier replaced (e9 → func3))
-input\sources\4a\0000004a.java: e9 -> func3 (Obfuscated identifier replaced (e9 → func3))
-input\sources\4a\0000004a.java: e9 -> func3 (Obfuscated identifier replaced (e9 → func3))
-input\sources\4a\0000004a.java: str2 -> func2 (Obfuscated identifier replaced (str2 → func2))
-input\sources\4a\0000004a.java: str2 -> func2 (Obfuscated identifier replaced (str2 → func2))
-input\sources\4a\0000004a.java: e9 -> func3 (Obfuscated identifier replaced (e9 → func3))
-input\sources\4a\0000004a.java: e9 -> func3 (Obfuscated identifier replaced (e9 → func3))
-input\sources\4a\0000004a.java: e9 -> func3 (Obfuscated identifier replaced (e9 → func3))
-input\sources\4a\0000004a.java: str2 -> func2 (Obfuscated identifier replaced (str2 → func2))
-input\sources\4b\0000004b.java: E3 -> Class1 (Obfuscated identifier replaced (E3 → Class1))
-input\sources\4c\0000004c.java: B6 -> Class1 (Obfuscated identifier replaced (B6 → Class1))
-input\sources\4d\0000004d.java: E4 -> Class1 (Obfuscated identifier replaced (E4 → Class1))
-input\sources\4f\0000004f.java: B6 -> Class1 (Obfuscated identifier replaced (B6 → Class1))
-input\sources\50\00000050.java: E6 -> Class1 (Obfuscated identifier replaced (E6 → Class1))
-input\sources\50\00000050.java: i9 -> func1 (Obfuscated identifier replaced (i9 → func1))
-input\sources\51\00000051.java: E6 -> Class1 (Obfuscated identifier replaced (E6 → Class1))
-input\sources\51\00000051.java: E6 -> Class1 (Obfuscated identifier replaced (E6 → Class1))
-input\sources\52\00000052.java: E6 -> Class1 (Obfuscated identifier replaced (E6 → Class1))
-input\sources\52\00000052.java: E6 -> Class1 (Obfuscated identifier replaced (E6 → Class1))
-input\sources\52\00000052.java: C0 -> Class2 (Obfuscated identifier replaced (C0 → Class2))
-input\sources\52\00000052.java: i9 -> func1 (Obfuscated identifier replaced (i9 → func1))
-input\sources\53\00000053.java: B6 -> Class1 (Obfuscated identifier replaced (B6 → Class1))
-input\sources\54\00000054.java: E6 -> Class1 (Obfuscated identifier replaced (E6 → Class1))
-input\sources\54\00000054.java: E6 -> Class1 (Obfuscated identifier replaced (E6 → Class1))
-input\sources\54\00000054.java: f0 -> func1 (Obfuscated identifier replaced (f0 → func1))
-input\sources\54\00000054.java: i9 -> func2 (Obfuscated identifier replaced (i9 → func2))
-input\sources\55\00000055.java: A0 -> Class1 (Obfuscated identifier replaced (A0 → Class1))
-input\sources\55\00000055.java: i9 -> func4 (Obfuscated identifier replaced (i9 → func4))
-input\sources\55\00000055.java: j9 -> func3 (Obfuscated identifier replaced (j9 → func3))
-input\sources\55\00000055.java: i9 -> func4 (Obfuscated identifier replaced (i9 → func4))
-input\sources\55\00000055.java: c0 -> func2 (Obfuscated identifier replaced (c0 → func2))
-input\sources\55\00000055.java: i9 -> func4 (Obfuscated identifier replaced (i9 → func4))
-input\sources\55\00000055.java: i9 -> func4 (Obfuscated identifier replaced (i9 → func4))
-input\sources\55\00000055.java: i9 -> func4 (Obfuscated identifier replaced (i9 → func4))
-input\sources\55\00000055.java: d9 -> func1 (Obfuscated identifier replaced (d9 → func1))
-input\sources\56\00000056.java: E6 -> Class1 (Obfuscated identifier replaced (E6 → Class1))
-input\sources\56\00000056.java: E6 -> Class1 (Obfuscated identifier replaced (E6 → Class1))
-input\sources\56\00000056.java: c0 -> func1 (Obfuscated identifier replaced (c0 → func1))
-input\sources\56\00000056.java: i9 -> func2 (Obfuscated identifier replaced (i9 → func2))
-input\sources\57\00000057.java: E6 -> Class1 (Obfuscated identifier replaced (E6 → Class1))
-input\sources\57\00000057.java: E6 -> Class1 (Obfuscated identifier replaced (E6 → Class1))
-input\sources\57\00000057.java: i9 -> func1 (Obfuscated identifier replaced (i9 → func1))
-input\sources\58\00000058.java: C3 -> Class1 (Obfuscated identifier replaced (C3 → Class1))
-input\sources\58\00000058.java: C3 -> Class1 (Obfuscated identifier replaced (C3 → Class1))
-input\sources\58\00000058.java: f9 -> func2 (Obfuscated identifier replaced (f9 → func2))
-input\sources\58\00000058.java: f10 -> func5 (Obfuscated identifier replaced (f10 → func5))
-input\sources\58\00000058.java: f11 -> func1 (Obfuscated identifier replaced (f11 → func1))
-input\sources\58\00000058.java: f12 -> func3 (Obfuscated identifier replaced (f12 → func3))
-input\sources\58\00000058.java: i9 -> func4 (Obfuscated identifier replaced (i9 → func4))
-input\sources\58\00000058.java: f9 -> func2 (Obfuscated identifier replaced (f9 → func2))
-input\sources\58\00000058.java: f10 -> func5 (Obfuscated identifier replaced (f10 → func5))
-input\sources\58\00000058.java: f11 -> func1 (Obfuscated identifier replaced (f11 → func1))
-input\sources\58\00000058.java: f12 -> func3 (Obfuscated identifier replaced (f12 → func3))
-input\sources\58\00000058.java: i9 -> func4 (Obfuscated identifier replaced (i9 → func4))
-input\sources\59\00000059.java: A2 -> Class1 (Obfuscated identifier replaced (A2 → Class1))
-input\sources\5a\0000005a.java: E6 -> Class1 (Obfuscated identifier replaced (E6 → Class1))
-input\sources\5a\0000005a.java: i9 -> func1 (Obfuscated identifier replaced (i9 → func1))
-input\sources\5c\0000005c.java: B6 -> Class1 (Obfuscated identifier replaced (B6 → Class1))
-input\sources\5d\0000005d.java: F4 -> Class1 (Obfuscated identifier replaced (F4 → Class1))
-input\sources\5d\0000005d.java: f1562a -> func1 (Obfuscated identifier replaced (f1562a → func1))
-input\sources\5e\0000005e.java: I0 -> Class1 (Obfuscated identifier replaced (I0 → Class1))
-input\sources\5e\0000005e.java: f2187a -> func3 (Obfuscated identifier replaced (f2187a → func3))
-input\sources\5e\0000005e.java: C0065b -> Class2 (Obfuscated identifier replaced (C0065b → Class2))
-input\sources\5e\0000005e.java: f2188b -> func2 (Obfuscated identifier replaced (f2188b → func2))
-input\sources\5e\0000005e.java: C0065b -> Class2 (Obfuscated identifier replaced (C0065b → Class2))
-input\sources\5e\0000005e.java: f2189a -> func1 (Obfuscated identifier replaced (f2189a → func1))
-input\sources\5e\0000005e.java: f2189a -> func1 (Obfuscated identifier replaced (f2189a → func1))
-input\sources\5e\0000005e.java: f2189a -> func1 (Obfuscated identifier replaced (f2189a → func1))
-input\sources\5e\0000005e.java: f2189a -> func1 (Obfuscated identifier replaced (f2189a → func1))
-input\sources\5e\0000005e.java: I0 -> Class1 (Obfuscated identifier replaced (I0 → Class1))
-input\sources\5e\0000005e.java: C0065b -> Class2 (Obfuscated identifier replaced (C0065b → Class2))
-input\sources\5e\0000005e.java: C0065b -> Class2 (Obfuscated identifier replaced (C0065b → Class2))
-input\sources\5f\0000005f.java: H4 -> Class1 (Obfuscated identifier replaced (H4 → Class1))
-input\sources\5f\0000005f.java: f1843a -> func3 (Obfuscated identifier replaced (f1843a → func3))
-input\sources\5f\0000005f.java: f1843a -> func3 (Obfuscated identifier replaced (f1843a → func3))
-input\sources\5f\0000005f.java: a9 -> func2 (Obfuscated identifier replaced (a9 → func2))
-input\sources\5f\0000005f.java: a10 -> func1 (Obfuscated identifier replaced (a10 → func1))
-input\sources\5f\0000005f.java: a9 -> func2 (Obfuscated identifier replaced (a9 → func2))
-input\sources\5f\0000005f.java: a10 -> func1 (Obfuscated identifier replaced (a10 → func1))
-input\sources\60\00000060.java: C5 -> Class1 (Obfuscated identifier replaced (C5 → Class1))
-input\sources\61\00000061.java: F4 -> Class1 (Obfuscated identifier replaced (F4 → Class1))
-input\sources\62\00000062.java: F6 -> Class1 (Obfuscated identifier replaced (F6 → Class1))
-input\sources\64\00000064.java: A3 -> Class1 (Obfuscated identifier replaced (A3 → Class1))
-input\sources\65\00000065.java: A3 -> Class1 (Obfuscated identifier replaced (A3 → Class1))
-input\sources\66\00000066.java: G0 -> Class1 (Obfuscated identifier replaced (G0 → Class1))
-input\sources\68\00000068.java: G1 -> Class1 (Obfuscated identifier replaced (G1 → Class1))
-input\sources\68\00000068.java: r8 -> func1 (Obfuscated identifier replaced (r8 → func1))
-input\sources\6b\0000006b.java: I0 -> Class1 (Obfuscated identifier replaced (I0 → Class1))
-input\sources\6b\0000006b.java: I0 -> Class1 (Obfuscated identifier replaced (I0 → Class1))
-input\sources\6c\0000006c.java: A4 -> Class1 (Obfuscated identifier replaced (A4 → Class1))
-input\sources\6c\0000006c.java: f193a -> func1 (Obfuscated identifier replaced (f193a → func1))
-input\sources\6c\0000006c.java: f194b -> func2 (Obfuscated identifier replaced (f194b → func2))
-input\sources\6c\0000006c.java: i9 -> func3 (Obfuscated identifier replaced (i9 → func3))
-input\sources\6c\0000006c.java: f193a -> func1 (Obfuscated identifier replaced (f193a → func1))
-input\sources\6c\0000006c.java: i9 -> func3 (Obfuscated identifier replaced (i9 → func3))
-input\sources\6c\0000006c.java: f194b -> func2 (Obfuscated identifier replaced (f194b → func2))
-input\sources\6c\0000006c.java: f194b -> func2 (Obfuscated identifier replaced (f194b → func2))
-input\sources\6c\0000006c.java: f193a -> func1 (Obfuscated identifier replaced (f193a → func1))
-input\sources\6d\0000006d.java: I0 -> Class1 (Obfuscated identifier replaced (I0 → Class1))
-input\sources\6d\0000006d.java: z8 -> func1 (Obfuscated identifier replaced (z8 → func1))
-input\sources\6d\0000006d.java: z8 -> func1 (Obfuscated identifier replaced (z8 → func1))
-input\sources\6e\0000006e.java: I0 -> Class1 (Obfuscated identifier replaced (I0 → Class1))
-input\sources\6f\0000006f.java: G7 -> Class1 (Obfuscated identifier replaced (G7 → Class1))
-input\sources\6f\0000006f.java: i9 -> func6 (Obfuscated identifier replaced (i9 → func6))
-input\sources\6f\0000006f.java: i10 -> func1 (Obfuscated identifier replaced (i10 → func1))
-input\sources\6f\0000006f.java: i11 -> func4 (Obfuscated identifier replaced (i11 → func4))
-input\sources\6f\0000006f.java: i9 -> func6 (Obfuscated identifier replaced (i9 → func6))
-input\sources\6f\0000006f.java: i11 -> func4 (Obfuscated identifier replaced (i11 → func4))
-input\sources\6f\0000006f.java: i10 -> func1 (Obfuscated identifier replaced (i10 → func1))
-input\sources\6f\0000006f.java: i11 -> func4 (Obfuscated identifier replaced (i11 → func4))
-input\sources\6f\0000006f.java: i11 -> func4 (Obfuscated identifier replaced (i11 → func4))
-input\sources\6f\0000006f.java: j9 -> func5 (Obfuscated identifier replaced (j9 → func5))
-input\sources\6f\0000006f.java: j10 -> func2 (Obfuscated identifier replaced (j10 → func2))
-input\sources\6f\0000006f.java: j11 -> func3 (Obfuscated identifier replaced (j11 → func3))
-input\sources\6f\0000006f.java: j9 -> func5 (Obfuscated identifier replaced (j9 → func5))
-input\sources\6f\0000006f.java: j11 -> func3 (Obfuscated identifier replaced (j11 → func3))
-input\sources\6f\0000006f.java: j10 -> func2 (Obfuscated identifier replaced (j10 → func2))
-input\sources\6f\0000006f.java: j11 -> func3 (Obfuscated identifier replaced (j11 → func3))
-input\sources\6f\0000006f.java: j11 -> func3 (Obfuscated identifier replaced (j11 → func3))
-input\sources\6f\0000006f.java: i9 -> func6 (Obfuscated identifier replaced (i9 → func6))
-input\sources\6f\0000006f.java: i10 -> func1 (Obfuscated identifier replaced (i10 → func1))
-input\sources\6f\0000006f.java: i11 -> func4 (Obfuscated identifier replaced (i11 → func4))
-input\sources\6f\0000006f.java: i11 -> func4 (Obfuscated identifier replaced (i11 → func4))
-input\sources\6f\0000006f.java: i9 -> func6 (Obfuscated identifier replaced (i9 → func6))
-input\sources\6f\0000006f.java: i10 -> func1 (Obfuscated identifier replaced (i10 → func1))
-input\sources\6f\0000006f.java: i10 -> func1 (Obfuscated identifier replaced (i10 → func1))
-input\sources\6f\0000006f.java: i10 -> func1 (Obfuscated identifier replaced (i10 → func1))
-input\sources\6f\0000006f.java: i9 -> func6 (Obfuscated identifier replaced (i9 → func6))
-input\sources\6f\0000006f.java: i11 -> func4 (Obfuscated identifier replaced (i11 → func4))
-input\sources\6f\0000006f.java: i10 -> func1 (Obfuscated identifier replaced (i10 → func1))
-input\sources\6f\0000006f.java: i11 -> func4 (Obfuscated identifier replaced (i11 → func4))
-input\sources\6f\0000006f.java: i9 -> func6 (Obfuscated identifier replaced (i9 → func6))
-input\sources\6f\0000006f.java: i10 -> func1 (Obfuscated identifier replaced (i10 → func1))
-input\sources\6f\0000006f.java: i10 -> func1 (Obfuscated identifier replaced (i10 → func1))
-input\sources\6f\0000006f.java: i9 -> func6 (Obfuscated identifier replaced (i9 → func6))
-input\sources\6f\0000006f.java: i10 -> func1 (Obfuscated identifier replaced (i10 → func1))
-input\sources\6f\0000006f.java: i11 -> func4 (Obfuscated identifier replaced (i11 → func4))
-input\sources\6f\0000006f.java: i10 -> func1 (Obfuscated identifier replaced (i10 → func1))
-input\sources\6f\0000006f.java: j9 -> func5 (Obfuscated identifier replaced (j9 → func5))
-input\sources\6f\0000006f.java: j10 -> func2 (Obfuscated identifier replaced (j10 → func2))
-input\sources\6f\0000006f.java: j11 -> func3 (Obfuscated identifier replaced (j11 → func3))
-input\sources\6f\0000006f.java: i9 -> func6 (Obfuscated identifier replaced (i9 → func6))
-input\sources\6f\0000006f.java: j11 -> func3 (Obfuscated identifier replaced (j11 → func3))
-input\sources\6f\0000006f.java: j11 -> func3 (Obfuscated identifier replaced (j11 → func3))
-input\sources\6f\0000006f.java: i9 -> func6 (Obfuscated identifier replaced (i9 → func6))
-input\sources\6f\0000006f.java: j9 -> func5 (Obfuscated identifier replaced (j9 → func5))
-input\sources\6f\0000006f.java: j10 -> func2 (Obfuscated identifier replaced (j10 → func2))
-input\sources\6f\0000006f.java: j10 -> func2 (Obfuscated identifier replaced (j10 → func2))
-input\sources\6f\0000006f.java: j10 -> func2 (Obfuscated identifier replaced (j10 → func2))
-input\sources\6f\0000006f.java: j9 -> func5 (Obfuscated identifier replaced (j9 → func5))
-input\sources\6f\0000006f.java: j11 -> func3 (Obfuscated identifier replaced (j11 → func3))
-input\sources\6f\0000006f.java: j10 -> func2 (Obfuscated identifier replaced (j10 → func2))
-input\sources\6f\0000006f.java: i9 -> func6 (Obfuscated identifier replaced (i9 → func6))
-input\sources\6f\0000006f.java: j9 -> func5 (Obfuscated identifier replaced (j9 → func5))
-input\sources\6f\0000006f.java: j10 -> func2 (Obfuscated identifier replaced (j10 → func2))
-input\sources\6f\0000006f.java: j10 -> func2 (Obfuscated identifier replaced (j10 → func2))
-input\sources\6f\0000006f.java: j9 -> func5 (Obfuscated identifier replaced (j9 → func5))
-input\sources\6f\0000006f.java: j10 -> func2 (Obfuscated identifier replaced (j10 → func2))
-input\sources\6f\0000006f.java: j11 -> func3 (Obfuscated identifier replaced (j11 → func3))
-input\sources\6f\0000006f.java: j10 -> func2 (Obfuscated identifier replaced (j10 → func2))
-input\sources\6f\0000006f.java: i9 -> func6 (Obfuscated identifier replaced (i9 → func6))
-input\sources\6f\0000006f.java: i10 -> func1 (Obfuscated identifier replaced (i10 → func1))
-input\sources\6f\0000006f.java: i11 -> func4 (Obfuscated identifier replaced (i11 → func4))
-input\sources\6f\0000006f.java: i9 -> func6 (Obfuscated identifier replaced (i9 → func6))
-input\sources\6f\0000006f.java: i10 -> func1 (Obfuscated identifier replaced (i10 → func1))
-input\sources\6f\0000006f.java: i11 -> func4 (Obfuscated identifier replaced (i11 → func4))
-input\sources\6f\0000006f.java: i11 -> func4 (Obfuscated identifier replaced (i11 → func4))
-input\sources\6f\0000006f.java: i10 -> func1 (Obfuscated identifier replaced (i10 → func1))
-input\sources\6f\0000006f.java: i11 -> func4 (Obfuscated identifier replaced (i11 → func4))
-input\sources\6f\0000006f.java: j9 -> func5 (Obfuscated identifier replaced (j9 → func5))
-input\sources\6f\0000006f.java: j10 -> func2 (Obfuscated identifier replaced (j10 → func2))
-input\sources\6f\0000006f.java: j11 -> func3 (Obfuscated identifier replaced (j11 → func3))
-input\sources\6f\0000006f.java: j9 -> func5 (Obfuscated identifier replaced (j9 → func5))
-input\sources\6f\0000006f.java: j10 -> func2 (Obfuscated identifier replaced (j10 → func2))
-input\sources\6f\0000006f.java: j11 -> func3 (Obfuscated identifier replaced (j11 → func3))
-input\sources\6f\0000006f.java: j11 -> func3 (Obfuscated identifier replaced (j11 → func3))
-input\sources\6f\0000006f.java: j10 -> func2 (Obfuscated identifier replaced (j10 → func2))
-input\sources\6f\0000006f.java: j11 -> func3 (Obfuscated identifier replaced (j11 → func3))
-input\sources\70\00000070.java: H5 -> Class1 (Obfuscated identifier replaced (H5 → Class1))
-input\sources\71\00000071.java: A5 -> Class1 (Obfuscated identifier replaced (A5 → Class1))
-input\sources\71\00000071.java: f219a -> func1 (Obfuscated identifier replaced (f219a → func1))
-input\sources\71\00000071.java: f219a -> func1 (Obfuscated identifier replaced (f219a → func1))
-input\sources\71\00000071.java: t8 -> func2 (Obfuscated identifier replaced (t8 → func2))
-input\sources\71\00000071.java: t8 -> func2 (Obfuscated identifier replaced (t8 → func2))
-input\sources\71\00000071.java: t8 -> func2 (Obfuscated identifier replaced (t8 → func2))
-input\sources\71\00000071.java: t8 -> func2 (Obfuscated identifier replaced (t8 → func2))
-input\sources\71\00000071.java: t8 -> func2 (Obfuscated identifier replaced (t8 → func2))
-input\sources\71\00000071.java: t8 -> func2 (Obfuscated identifier replaced (t8 → func2))
-input\sources\71\00000071.java: f219a -> func1 (Obfuscated identifier replaced (f219a → func1))
-input\sources\71\00000071.java: t8 -> func2 (Obfuscated identifier replaced (t8 → func2))
-input\sources\71\00000071.java: t8 -> func2 (Obfuscated identifier replaced (t8 → func2))
-input\sources\71\00000071.java: f219a -> func1 (Obfuscated identifier replaced (f219a → func1))
-input\sources\71\00000071.java: t8 -> func2 (Obfuscated identifier replaced (t8 → func2))
-input\sources\71\00000071.java: t8 -> func2 (Obfuscated identifier replaced (t8 → func2))
-input\sources\71\00000071.java: f219a -> func1 (Obfuscated identifier replaced (f219a → func1))
-input\sources\71\00000071.java: t8 -> func2 (Obfuscated identifier replaced (t8 → func2))
 
 
 
 ===== Control Flow =====
 
-input\deadCode.py: if False:
+input\deadcode.py: if False:
     print("Dead branch")
  ->  (Unreachable branch (condition always False))
-input\deadCode.py: if False: ...` blocks
+input\deadcode.py: if False: ...` blocks
       - replace `if True: body` with `body` (in-place)
       - record lines removed
     """
     def __init__(self):
         self.changes = []
  ->  (Unreachable branch (condition always False))
-input\deadCode.py: if True:
+input\deadcode.py: if True:
     print("Always runs")
  -> print("Always runs")
  (Always-true condition simplified (kept body, removed if header))
-input\deadCode.py: if True:
+input\deadcode.py: if True:
     print("Run")
  -> print("Run")
  (Always-true condition simplified (kept body, removed if header))
-input\deadCode.py: if(false) { ... }` blocks ->  (Unreachable branch (condition always false))
-input\deadCode.py: if(false) { ... } or if(false) statement; ->  (Unreachable branch (condition always false))
-input\deadCode.py: if(false) removed (dead code)"}) ->  (Unreachable branch (condition always false))
-input\deadCode.py: if(true) { ... }` with block contents (strip braces) -> { ... }` with block contents (strip braces) (Always-true condition simplified (kept statement/block, removed condition header))
-input\deadCode.py: if(true) { block } => replace with block contents -> { block } => replace with block contents (Always-true condition simplified (kept statement/block, removed condition header))
-input\deadCode.py: if(true) inlined (kept body)"}) ->  inlined (kept body)"}) (Always-true condition simplified (kept statement/block, removed condition header))
+input\deadcode.py: if(false) { ... }` blocks ->  (Unreachable branch (condition always false))
+input\deadcode.py: if(false) { ... } or if(false) statement; ->  (Unreachable branch (condition always false))
+input\deadcode.py: if(false) removed (dead code)"}) ->  (Unreachable branch (condition always false))
+input\deadcode.py: if(true) { ... }` with block contents (strip braces) -> { ... }` with block contents (strip braces) (Always-true condition simplified (kept statement/block, removed condition header))
+input\deadcode.py: if(true) { block } => replace with block contents -> { block } => replace with block contents (Always-true condition simplified (kept statement/block, removed condition header))
+input\deadcode.py: if(true) inlined (kept body)"}) ->  inlined (kept body)"}) (Always-true condition simplified (kept statement/block, removed condition header))
 
 
 
 ===== Dead Code =====
 
+input\00000021.py: import base64
+import unittest
+import builtins
+
+def api_redirection(a, b):
+    def _real_api_add(x, y):
+        return x + y
+    def _wrapper -> import base64
+import unittest
+import builtins
+
+def api_redirection(a, b):
+
+    def _real_api_add(x, y):
+        return x + y
+
+    def _wrapp (Full cleaned file (Python deadcode removal))
+input\00000021.py: code_after_return at 308
+input\00000021.py: code_after_return at 2057
 input\api_redirection.py: # analyzers/api_redirection.py
 """
 Detect API redirection/wrapper patterns:
@@ -604,13 +107,13 @@ import re
 from typing import List, Dict, Tuple
 
 class FakeConditionCleaner:
-    " -> # -------------------- controlflow.py --------------------
-import re
+    " -> import re
 from typing import List, Dict, Tuple
 
 class FakeConditionCleaner:
-    " (parse_error: invalid syntax. Perhaps you forgot a comma? (<unknown>, line 46))
-input\controlFlow.py: code_after_return at 3384
+    """
+    Detect and clean fake/unreachable conditions from so (Full cleaned file (Python deadcode removal))
+input\controlFlow.py: code_after_return at 3160
 input\controlflow_flattening.py: # analyzers/controlflow_flattening.py
 """
 Detect/control-flow flattening patterns (dispatcher loops, state-machine switch inside loop).
@@ -618,7 +121,7 @@ Cons -> """
 Detect/control-flow flattening patterns (dispatcher loops, state-machine switch inside loop).
 Conservative detection + optional simple u (Full cleaned file (Python deadcode removal))
 input\controlflow_flattening.py: code_after_return at 1225
-input\deadCode.py: """# Dead Code Test Cases
+input\deadcode.py: """# Dead Code Test Cases
 
 # 1. Unused variable
 x = 10   # dead
@@ -695,1567 +198,58 @@ import builtins
 import ast
 import keyword
 import builtins
-
-# ----------------------------------------
-# Reserved keywords for multiple languages
-# (parse_error: unmatched ')' (<unknown>, line 50))
-input\nameIdentifier.py: code_after_return at 589
-input\nameIdentifier.py: code_after_return at 1235
-input\nameIdentifier.py: code_after_return at 1748
-input\nameIdentifier.py: code_after_return at 2009
+LANG_KEYWORDS = {'python': set(keyword.kwlist) | set(dir(builtins)), 'c': {'auto', 'brea (Full cleaned file (Python deadcode removal))
+input\nameIdentifier.py: code_after_return at 442
+input\nameIdentifier.py: code_after_return at 1078
+input\nameIdentifier.py: code_after_return at 1577
+input\nameIdentifier.py: code_after_return at 1828
 input\opaque_predicate.py: # Opaque Predicate Complex Test Cases
 
 # 1. Always true with redundant check inside loop
 
 """for i in range(2):
-    if (2 + 2 == 4) and (3 > -> # Opaque Predicate Complex Test Cases
+    if (2 + 2 == 4) and (3 > -> """for i in range(2):
+    if (2 + 2 == 4) and (3 > 1):
+        print("Loop always true:", i)
 
-# 1. Always true with redundant check inside loop
-
-"""for i in range(2):
-    if (2 + 2 == 4) and (3 > (parse_error: invalid syntax (<unknown>, line 100))
-input\opaque_predicate.py: code_after_return at 1600
-input\stringEncryption.py: # input/stringDecryptor.py
-import re
+# 2. Always false predicate (never executes)
+f (Full cleaned file (Python deadcode removal))
+input\stringEncryption.py: import re
 
 def xor_decrypt(enc_list, key=42):
     """XOR decrypt a list of integers to a string."""
     try:
-     -> import re
+        return ''.join(chr(c ^  -> import re
 
 def xor_decrypt(enc_list, key=42):
     """XOR decrypt a list of integers to a string."""
     try:
         return ''.join((chr(c ^ (Full cleaned file (Python deadcode removal))
-input\sources\00\00000000.java: package Class1;
-
-import android.annotation.SuppressLint;
-import android.util.Log;
-import java.io.File;
-import java.io.FileOutputStream;
-impo -> package Class1;
-
-import android.annotation.SuppressLint;
-import android.util.Log;
-import java.io.File;
-import java.io.FileOutputStream;
-impo (Full cleaned file (C-like deadcode removal))
-input\sources\00\00000000.java: code_after_return at 1946
-input\sources\01\00000001.java: package Class1;
-
-import android.os.Parcel;
-import android.os.Parcelable;
-import android.os.SystemClock;
-import java.util.concurrent.TimeUnit -> package Class1;
-
-import android.os.Parcel;
-import android.os.Parcelable;
-import android.os.SystemClock;
-import java.util.concurrent.TimeUnit (Full cleaned file (C-like deadcode removal))
-input\sources\01\00000001.java: code_after_return at 698
-input\sources\01\00000001.java: code_after_return at 813
-input\sources\01\00000001.java: code_after_return at 990
-input\sources\01\00000001.java: code_after_return at 1146
-input\sources\01\00000001.java: code_after_return at 1258
-input\sources\01\00000001.java: code_after_return at 1320
-input\sources\01\00000001.java: code_after_return at 1376
-input\sources\01\00000001.java: code_after_return at 1451
-input\sources\01\00000001.java: code_after_return at 1551
-input\sources\01\00000001.java: code_after_return at 1607
-input\sources\02\00000002.java: int alpha = 2130968625; ->  (Removed likely-unused declaration 'alpha')
-input\sources\02\00000002.java: int coordinatorLayoutStyle = 2130968949; ->  (Removed likely-unused declaration 'coordinatorLayoutStyle')
-input\sources\02\00000002.java: int font = 2130969131; ->  (Removed likely-unused declaration 'font')
-input\sources\02\00000002.java: int fontProviderCerts = 2130969134; ->  (Removed likely-unused declaration 'fontProviderCerts')
-input\sources\02\00000002.java: int fontProviderFetchTimeout = 2130969136; ->  (Removed likely-unused declaration 'fontProviderFetchTimeout')
-input\sources\02\00000002.java: int fontProviderPackage = 2130969137; ->  (Removed likely-unused declaration 'fontProviderPackage')
-input\sources\02\00000002.java: int fontStyle = 2130969140; ->  (Removed likely-unused declaration 'fontStyle')
-input\sources\02\00000002.java: int fontWeight = 2130969143; ->  (Removed likely-unused declaration 'fontWeight')
-input\sources\02\00000002.java: int keylines = 2130969241; ->  (Removed likely-unused declaration 'keylines')
-input\sources\02\00000002.java: int layout_anchorGravity = 2130969258; ->  (Removed likely-unused declaration 'layout_anchorGravity')
-input\sources\02\00000002.java: int layout_insetEdge = 2130969318; ->  (Removed likely-unused declaration 'layout_insetEdge')
-input\sources\02\00000002.java: int layout_keyline = 2130969319; ->  (Removed likely-unused declaration 'layout_keyline')
-input\sources\02\00000002.java: int ttcIndex = 2130969964; ->  (Removed likely-unused declaration 'ttcIndex')
-input\sources\02\00000002.java: package A;
-
-/* loaded from: classes.dex */
-public final class a {
-    public static final int alpha = 2130968625;
-    public static final in -> package A;
-
-/* loaded from: classes.dex */
-public final class a {
-    public static final 
-    public static final int coordinatorLayoutStl  (Full cleaned file (C-like deadcode removal))
-input\sources\03\00000003.java: int androidx_core_ripple_material_light = 2131099691; ->  (Removed likely-unused declaration 'androidx_core_ripple_material_light')
-input\sources\03\00000003.java: int androidx_core_secondary_text_default_material_light = 2131099692; ->  (Removed likely-unused declaration 'androidx_core_secondary_text_default_material_light')
-input\sources\03\00000003.java: int call_notification_decline_color = 2131099770; ->  (Removed likely-unused declaration 'call_notification_decline_color')
-input\sources\03\00000003.java: int notification_action_color_filter = 2131100707; ->  (Removed likely-unused declaration 'notification_action_color_filter')
-input\sources\03\00000003.java: package B;
-
-/* loaded from: classes.dex */
-public final class b {
-    public static final int androidx_core_ripple_material_light = 21310996 -> package B;
-
-/* loaded from: classes.dex */
-public final class b {
-    public static final 
-    public static final int androidx_core_seconda (Full cleaned file (C-like deadcode removal))
-input\sources\04\00000004.java: package Class1;
-
-/* JADX WARN: Failed to restore enum class, 'enum' modifier removed */
-/* loaded from: classes2.dex */
-public abstract clas -> package Class1;
-
-/* JADX WARN: Failed to restore enum class, 'enum' modifier removed */
-/* loaded from: classes2.dex */
-public abstract clas (Full cleaned file (C-like deadcode removal))
-input\sources\04\00000004.java: code_after_return at 1717
-input\sources\04\00000004.java: code_after_return at 1793
-input\sources\04\00000004.java: code_after_return at 1883
-input\sources\05\00000005.java: package Class1;
-
-import android.annotation.SuppressLint;
-import android.os.Build;
-import android.os.Handler;
-import android.os.Looper;
-impor -> package Class1;
-
-import android.annotation.SuppressLint;
-import android.os.Build;
-import android.os.Handler;
-import android.os.Looper;
-impor (Full cleaned file (C-like deadcode removal))
-input\sources\05\00000005.java: code_after_return at 1586
-input\sources\05\00000005.java: code_after_return at 1618
-input\sources\05\00000005.java: code_after_return at 1709
-input\sources\05\00000005.java: code_after_return at 2395
-input\sources\06\00000006.java: int compat_button_inset_horizontal_material = 2131165324; ->  (Removed likely-unused declaration 'compat_button_inset_horizontal_material')
-input\sources\06\00000006.java: int compat_button_inset_vertical_material = 2131165325; ->  (Removed likely-unused declaration 'compat_button_inset_vertical_material')
-input\sources\06\00000006.java: int compat_button_padding_vertical_material = 2131165327; ->  (Removed likely-unused declaration 'compat_button_padding_vertical_material')
-input\sources\06\00000006.java: int compat_notification_large_icon_max_width = 2131165330; ->  (Removed likely-unused declaration 'compat_notification_large_icon_max_width')
-input\sources\06\00000006.java: int notification_action_icon_size = 2131166125; ->  (Removed likely-unused declaration 'notification_action_icon_size')
-input\sources\06\00000006.java: int notification_big_circle_margin = 2131166127; ->  (Removed likely-unused declaration 'notification_big_circle_margin')
-input\sources\06\00000006.java: int notification_large_icon_height = 2131166129; ->  (Removed likely-unused declaration 'notification_large_icon_height')
-input\sources\06\00000006.java: int notification_large_icon_width = 2131166130; ->  (Removed likely-unused declaration 'notification_large_icon_width')
-input\sources\06\00000006.java: int notification_media_narrow_margin = 2131166132; ->  (Removed likely-unused declaration 'notification_media_narrow_margin')
-input\sources\06\00000006.java: int notification_right_side_padding_top = 2131166134; ->  (Removed likely-unused declaration 'notification_right_side_padding_top')
-input\sources\06\00000006.java: int notification_small_icon_size_as_large = 2131166136; ->  (Removed likely-unused declaration 'notification_small_icon_size_as_large')
-input\sources\06\00000006.java: int notification_top_pad_large_text = 2131166139; ->  (Removed likely-unused declaration 'notification_top_pad_large_text')
-input\sources\06\00000006.java: package B;
-
-/* loaded from: classes.dex */
-public final class c {
-    public static final int compat_button_inset_horizontal_material = 2131 -> package B;
-
-/* loaded from: classes.dex */
-public final class c {
-    public static final 
-    public static final int compat_button_inset_v (Full cleaned file (C-like deadcode removal))
-input\sources\07\00000007.java: int TextAppearance_Compat_Notification = 2132017659; ->  (Removed likely-unused declaration 'TextAppearance_Compat_Notification')
-input\sources\07\00000007.java: int TextAppearance_Compat_Notification_Info = 2132017660; ->  (Removed likely-unused declaration 'TextAppearance_Compat_Notification_Info')
-input\sources\07\00000007.java: int TextAppearance_Compat_Notification_Time = 2132017665; ->  (Removed likely-unused declaration 'TextAppearance_Compat_Notification_Time')
-input\sources\07\00000007.java: int Widget_Compat_NotificationActionContainer = 2132018045; ->  (Removed likely-unused declaration 'Widget_Compat_NotificationActionContainer')
-input\sources\07\00000007.java: int Widget_Compat_NotificationActionText = 2132018046; ->  (Removed likely-unused declaration 'Widget_Compat_NotificationActionText')
-input\sources\07\00000007.java: package A;
-
-/* loaded from: classes.dex */
-public final class b {
-    public static final int TextAppearance_Compat_Notification = 213201765 -> package A;
-
-/* loaded from: classes.dex */
-public final class b {
-    public static final 
-    public static final int TextAppearance_Compat (Full cleaned file (C-like deadcode removal))
-input\sources\08\00000008.java: int ic_call_answer = 2131231357; ->  (Removed likely-unused declaration 'ic_call_answer')
-input\sources\08\00000008.java: int ic_call_answer_low = 2131231358; ->  (Removed likely-unused declaration 'ic_call_answer_low')
-input\sources\08\00000008.java: int ic_call_answer_video_low = 2131231360; ->  (Removed likely-unused declaration 'ic_call_answer_video_low')
-input\sources\08\00000008.java: int ic_call_decline_low = 2131231364; ->  (Removed likely-unused declaration 'ic_call_decline_low')
-input\sources\08\00000008.java: int notification_action_background = 2131231957; ->  (Removed likely-unused declaration 'notification_action_background')
-input\sources\08\00000008.java: int notification_bg_low_normal = 2131231960; ->  (Removed likely-unused declaration 'notification_bg_low_normal')
-input\sources\08\00000008.java: int notification_bg_low_pressed = 2131231961; ->  (Removed likely-unused declaration 'notification_bg_low_pressed')
-input\sources\08\00000008.java: int notification_bg_normal = 2131231962; ->  (Removed likely-unused declaration 'notification_bg_normal')
-input\sources\08\00000008.java: int notification_template_icon_low_bg = 2131231967; ->  (Removed likely-unused declaration 'notification_template_icon_low_bg')
-input\sources\08\00000008.java: int notification_tile_bg = 2131231968; ->  (Removed likely-unused declaration 'notification_tile_bg')
-input\sources\08\00000008.java: int notify_panel_notification_icon_bg = 2131231969; ->  (Removed likely-unused declaration 'notify_panel_notification_icon_bg')
-input\sources\08\00000008.java: package B;
-
-/* loaded from: classes.dex */
-public final class d {
-    public static final int ic_call_answer = 2131231357;
-    public static -> package B;
-
-/* loaded from: classes.dex */
-public final class d {
-    public static final 
-    public static final int ic_call_answer_low =  (Full cleaned file (C-like deadcode removal))
-input\sources\09\00000009.java: package Class1;
-
-/* loaded from: classes2.dex */
-public interface d {
-    void func1();
-} -> package Class1;
-
-/* loaded from: classes2.dex */
-public interface d {
-    void func1();
-} (Full cleaned file (C-like deadcode removal))
-input\sources\0a\0000000a.java: int accessibility_action_clickable_span = 2131361837; ->  (Removed likely-unused declaration 'accessibility_action_clickable_span')
-input\sources\0a\0000000a.java: int accessibility_custom_action_0 = 2131361838; ->  (Removed likely-unused declaration 'accessibility_custom_action_0')
-input\sources\0a\0000000a.java: int accessibility_custom_action_10 = 2131361840; ->  (Removed likely-unused declaration 'accessibility_custom_action_10')
-input\sources\0a\0000000a.java: int accessibility_custom_action_12 = 2131361842; ->  (Removed likely-unused declaration 'accessibility_custom_action_12')
-input\sources\0a\0000000a.java: int accessibility_custom_action_13 = 2131361843; ->  (Removed likely-unused declaration 'accessibility_custom_action_13')
-input\sources\0a\0000000a.java: int accessibility_custom_action_15 = 2131361845; ->  (Removed likely-unused declaration 'accessibility_custom_action_15')
-input\sources\0a\0000000a.java: int accessibility_custom_action_17 = 2131361847; ->  (Removed likely-unused declaration 'accessibility_custom_action_17')
-input\sources\0a\0000000a.java: int accessibility_custom_action_19 = 2131361849; ->  (Removed likely-unused declaration 'accessibility_custom_action_19')
-input\sources\0a\0000000a.java: int accessibility_custom_action_2 = 2131361850; ->  (Removed likely-unused declaration 'accessibility_custom_action_2')
-input\sources\0a\0000000a.java: int accessibility_custom_action_21 = 2131361852; ->  (Removed likely-unused declaration 'accessibility_custom_action_21')
-input\sources\0a\0000000a.java: int accessibility_custom_action_22 = 2131361853; ->  (Removed likely-unused declaration 'accessibility_custom_action_22')
-input\sources\0a\0000000a.java: int accessibility_custom_action_25 = 2131361856; ->  (Removed likely-unused declaration 'accessibility_custom_action_25')
-input\sources\0a\0000000a.java: int accessibility_custom_action_26 = 2131361857; ->  (Removed likely-unused declaration 'accessibility_custom_action_26')
-input\sources\0a\0000000a.java: int accessibility_custom_action_28 = 2131361859; ->  (Removed likely-unused declaration 'accessibility_custom_action_28')
-input\sources\0a\0000000a.java: int accessibility_custom_action_3 = 2131361861; ->  (Removed likely-unused declaration 'accessibility_custom_action_3')
-input\sources\0a\0000000a.java: int accessibility_custom_action_30 = 2131361862; ->  (Removed likely-unused declaration 'accessibility_custom_action_30')
-input\sources\0a\0000000a.java: int accessibility_custom_action_4 = 2131361864; ->  (Removed likely-unused declaration 'accessibility_custom_action_4')
-input\sources\0a\0000000a.java: int accessibility_custom_action_6 = 2131361866; ->  (Removed likely-unused declaration 'accessibility_custom_action_6')
-input\sources\0a\0000000a.java: int accessibility_custom_action_7 = 2131361867; ->  (Removed likely-unused declaration 'accessibility_custom_action_7')
-input\sources\0a\0000000a.java: int accessibility_custom_action_9 = 2131361869; ->  (Removed likely-unused declaration 'accessibility_custom_action_9')
-input\sources\0a\0000000a.java: int action_container = 2131361888; ->  (Removed likely-unused declaration 'action_container')
-input\sources\0a\0000000a.java: int action_image = 2131361895; ->  (Removed likely-unused declaration 'action_image')
-input\sources\0a\0000000a.java: int actions = 2131361914; ->  (Removed likely-unused declaration 'actions')
-input\sources\0a\0000000a.java: int async = 2131362028; ->  (Removed likely-unused declaration 'async')
-input\sources\0a\0000000a.java: int blocking = 2131362094; ->  (Removed likely-unused declaration 'blocking')
-input\sources\0a\0000000a.java: int dialog_button = 2131362715; ->  (Removed likely-unused declaration 'dialog_button')
-input\sources\0a\0000000a.java: int edit_text_id = 2131362802; ->  (Removed likely-unused declaration 'edit_text_id')
-input\sources\0a\0000000a.java: int hide_ime_id = 2131363167; ->  (Removed likely-unused declaration 'hide_ime_id')
-input\sources\0a\0000000a.java: int icon_group = 2131363208; ->  (Removed likely-unused declaration 'icon_group')
-input\sources\0a\0000000a.java: int info = 2131363334; ->  (Removed likely-unused declaration 'info')
-input\sources\0a\0000000a.java: int italic = 2131363376; ->  (Removed likely-unused declaration 'italic')
-input\sources\0a\0000000a.java: int line3 = 2131363670; ->  (Removed likely-unused declaration 'line3')
-input\sources\0a\0000000a.java: int normal = 2131364141; ->  (Removed likely-unused declaration 'normal')
-input\sources\0a\0000000a.java: int notification_main_column = 2131364160; ->  (Removed likely-unused declaration 'notification_main_column')
-input\sources\0a\0000000a.java: int right_icon = 2131364607; ->  (Removed likely-unused declaration 'right_icon')
-input\sources\0a\0000000a.java: int tag_accessibility_heading = 2131364933; ->  (Removed likely-unused declaration 'tag_accessibility_heading')
-input\sources\0a\0000000a.java: int tag_on_receive_content_listener = 2131364936; ->  (Removed likely-unused declaration 'tag_on_receive_content_listener')
-input\sources\0a\0000000a.java: int tag_screen_reader_focusable = 2131364938; ->  (Removed likely-unused declaration 'tag_screen_reader_focusable')
-input\sources\0a\0000000a.java: int tag_unhandled_key_listeners = 2131364942; ->  (Removed likely-unused declaration 'tag_unhandled_key_listeners')
-input\sources\0a\0000000a.java: int text2 = 2131364956; ->  (Removed likely-unused declaration 'text2')
-input\sources\0a\0000000a.java: int time = 2131365113; ->  (Removed likely-unused declaration 'time')
-input\sources\0a\0000000a.java: package B;
-
-/* loaded from: classes.dex */
-public final class e {
-    public static final int accessibility_action_clickable_span = 21313618 -> package B;
-
-/* loaded from: classes.dex */
-public final class e {
-    public static final 
-    public static final int accessibility_custom_ (Full cleaned file (C-like deadcode removal))
-input\sources\0b\0000000b.java: package Class1;
-
-import android.view.View;
-
-/* loaded from: classes2.dex */
-public interface e {
-    void a(int func1, View view);
-} -> package Class1;
-
-import android.view.View;
-
-/* loaded from: classes2.dex */
-public interface e {
-    void a(int func1, View view);
-} (Full cleaned file (C-like deadcode removal))
-input\sources\0c\0000000c.java: int call_notification_answer_action = 2131952157; ->  (Removed likely-unused declaration 'call_notification_answer_action')
-input\sources\0c\0000000c.java: int call_notification_answer_video_action = 2131952158; ->  (Removed likely-unused declaration 'call_notification_answer_video_action')
-input\sources\0c\0000000c.java: int call_notification_hang_up_action = 2131952160; ->  (Removed likely-unused declaration 'call_notification_hang_up_action')
-input\sources\0c\0000000c.java: int call_notification_screening_text = 2131952163; ->  (Removed likely-unused declaration 'call_notification_screening_text')
-input\sources\0c\0000000c.java: int status_bar_notification_info_overflow = 2131954096; ->  (Removed likely-unused declaration 'status_bar_notification_info_overflow')
-input\sources\0c\0000000c.java: package B;
-
-/* loaded from: classes.dex */
-public final class f {
-    public static final int call_notification_answer_action = 2131952157;
- -> package B;
-
-/* loaded from: classes.dex */
-public final class f {
-    public static final 
-    public static final int call_notification_ans (Full cleaned file (C-like deadcode removal))
-input\sources\0d\0000000d.java: package Class1;
-
-/* loaded from: classes2.dex */
-public interface E {
-    void func1();
-} -> package Class1;
-
-/* loaded from: classes2.dex */
-public interface E {
-    void func1();
-} (Full cleaned file (C-like deadcode removal))
-input\sources\0e\0000000e.java: package Class2;
-
-import android.content.Intent;
-
-/* loaded from: classes2.dex */
-public interface F {
-    void Class1(Intent intent);
-} -> package Class2;
-
-import android.content.Intent;
-
-/* loaded from: classes2.dex */
-public interface F {
-    void Class1(Intent intent);
-} (Full cleaned file (C-like deadcode removal))
-input\sources\0f\0000000f.java: package Class1;
-
-/* loaded from: classes2.dex */
-public interface G {
-    void a();
-} -> package Class1;
-
-/* loaded from: classes2.dex */
-public interface G {
-    void a();
-} (Full cleaned file (C-like deadcode removal))
-input\sources\10\00000010.java: package Class1;
-
-/* loaded from: classes2.dex */
-public interface H {
-    void a(String str);
-} -> package Class1;
-
-/* loaded from: classes2.dex */
-public interface H {
-    void a(String str);
-} (Full cleaned file (C-like deadcode removal))
-input\sources\11\00000011.java: package Class1;
-
-/* loaded from: classes2.dex */
-public interface i {
-    void M(int func1);
-} -> package Class1;
-
-/* loaded from: classes2.dex */
-public interface i {
-    void M(int func1);
-} (Full cleaned file (C-like deadcode removal))
-input\sources\12\00000012.java: package Class1;
-
-/* loaded from: classes2.dex */
-public interface j {
-    void V(int func1);
-} -> package Class1;
-
-/* loaded from: classes2.dex */
-public interface j {
-    void V(int func1);
-} (Full cleaned file (C-like deadcode removal))
-input\sources\13\00000013.java: package Class2;
-
-/* loaded from: classes2.dex */
-public interface k {
-    void Class1(int func1);
-} -> package Class2;
-
-/* loaded from: classes2.dex */
-public interface k {
-    void Class1(int func1);
-} (Full cleaned file (C-like deadcode removal))
-input\sources\14\00000014.java: package Class1;
-
-/* loaded from: classes2.dex */
-public interface l {
-    void func1(int func2);
-} -> package Class1;
-
-/* loaded from: classes2.dex */
-public interface l {
-    void func1(int func2);
-} (Full cleaned file (C-like deadcode removal))
-input\sources\15\00000015.java: package Class1;
-
-/* loaded from: classes2.dex */
-enum e {
-    USE_CACHE,
-    SKIP_CACHE_LOOKUP,
-    IGNORE_CACHE_EXPIRATION
-} -> package Class1;
-
-/* loaded from: classes2.dex */
-enum e {
-    USE_CACHE,
-    SKIP_CACHE_LOOKUP,
-    IGNORE_CACHE_EXPIRATION
-} (Full cleaned file (C-like deadcode removal))
-input\sources\16\00000016.java: package Class2;
-
-/* loaded from: classes2.dex */
-public interface m {
-    void Class1(int func1);
-} -> package Class2;
-
-/* loaded from: classes2.dex */
-public interface m {
-    void Class1(int func1);
-} (Full cleaned file (C-like deadcode removal))
-input\sources\17\00000017.java: package Class1;
-
-/* loaded from: classes2.dex */
-public interface n {
-    void func1(int func2);
-} -> package Class1;
-
-/* loaded from: classes2.dex */
-public interface n {
-    void func1(int func2);
-} (Full cleaned file (C-like deadcode removal))
-input\sources\18\00000018.java: package Class1;
-
-/* loaded from: classes2.dex */
-public interface o {
-    void p(int func1, String str);
-} -> package Class1;
-
-/* loaded from: classes2.dex */
-public interface o {
-    void p(int func1, String str);
-} (Full cleaned file (C-like deadcode removal))
-input\sources\19\00000019.java: package Class1;
-
-/* loaded from: classes2.dex */
-public interface p {
-    String a(int func1);
-
-    String[] b();
-
-    String c(int func1);
- -> package Class1;
-
-/* loaded from: classes2.dex */
-public interface p {
-    String a(int func1);
-
-    String[] b();
-
-    String c(int func1);
- (Full cleaned file (C-like deadcode removal))
-input\sources\1a\0000001a.java: package Class1;
-
-/* loaded from: classes2.dex */
-public interface u {
-    void X(int func1);
-} -> package Class1;
-
-/* loaded from: classes2.dex */
-public interface u {
-    void X(int func1);
-} (Full cleaned file (C-like deadcode removal))
-input\sources\1b\0000001b.java: package Class1;
-
-/* loaded from: classes2.dex */
-public interface q {
-} -> package Class1;
-
-/* loaded from: classes2.dex */
-public interface q {
-} (Full cleaned file (C-like deadcode removal))
-input\sources\1c\0000001c.java: package Class1;
-
-/* loaded from: classes2.dex */
-public enum b {
-    TRACE_EVENT_RATE_LIMITED("_fstec"),
-    NETWORK_TRACE_EVENT_RATE_LIMITE -> package Class1;
-
-/* loaded from: classes2.dex */
-public enum b {
-    TRACE_EVENT_RATE_LIMITED("_fstec"),
-    NETWORK_TRACE_EVENT_RATE_LIMITE (Full cleaned file (C-like deadcode removal))
-input\sources\1c\0000001c.java: code_after_return at 523
-input\sources\1d\0000001d.java: package Class1;
-
-/* loaded from: classes2.dex */
-public interface v {
-    void P(int func1);
-} -> package Class1;
-
-/* loaded from: classes2.dex */
-public interface v {
-    void P(int func1);
-} (Full cleaned file (C-like deadcode removal))
-input\sources\1e\0000001e.java: package Class1;
-
-/* loaded from: classes2.dex */
-public interface w {
-    void y(int func1);
-} -> package Class1;
-
-/* loaded from: classes2.dex */
-public interface w {
-    void y(int func1);
-} (Full cleaned file (C-like deadcode removal))
-input\sources\1f\0000001f.java: package Class1;
-
-/* loaded from: classes2.dex */
-public interface r {
-    void func2(int func1, String str);
-} -> package Class1;
-
-/* loaded from: classes2.dex */
-public interface r {
-    void func2(int func1, String str);
-} (Full cleaned file (C-like deadcode removal))
-input\sources\20\00000020.java: package Class1;
-
-/* loaded from: classes2.dex */
-public interface x {
-} -> package Class1;
-
-/* loaded from: classes2.dex */
-public interface x {
-} (Full cleaned file (C-like deadcode removal))
-input\sources\21\00000021.java: package Class2;
-
-/* loaded from: classes2.dex */
-public interface s {
-    void Class1(int func2);
-
-    void func1(String str, int func2);
-} -> package Class2;
-
-/* loaded from: classes2.dex */
-public interface s {
-    void Class1(int func2);
-
-    void func1(String str, int func2);
-} (Full cleaned file (C-like deadcode removal))
-input\sources\22\00000022.java: package Class2;
-
-/* loaded from: classes2.dex */
-public interface y {
-    void Class1(int func1);
-} -> package Class2;
-
-/* loaded from: classes2.dex */
-public interface y {
-    void Class1(int func1);
-} (Full cleaned file (C-like deadcode removal))
-input\sources\23\00000023.java: package Class1;
-
-/* loaded from: classes2.dex */
-public interface t {
-    void u(int func2, int func1);
-} -> package Class1;
-
-/* loaded from: classes2.dex */
-public interface t {
-    void u(int func2, int func1);
-} (Full cleaned file (C-like deadcode removal))
-input\sources\24\00000024.java: package Class1;
-
-/* loaded from: classes2.dex */
-public interface z {
-    void J();
-} -> package Class1;
-
-/* loaded from: classes2.dex */
-public interface z {
-    void J();
-} (Full cleaned file (C-like deadcode removal))
-input\sources\25\00000025.java: package E;
-
-/* loaded from: classes.dex */
-public class a {
-    public static float a(float func4, float func9, float func1) {
-        if (f -> package E;
-
-/* loaded from: classes.dex */
-public class a {
-    public static float a(float func4, float func9, float func1) {
-        if (f (Full cleaned file (C-like deadcode removal))
-input\sources\25\00000025.java: code_after_return at 181
-input\sources\25\00000025.java: code_after_return at 246
-input\sources\25\00000025.java: code_after_return at 278
-input\sources\25\00000025.java: code_after_return at 399
-input\sources\25\00000025.java: code_after_return at 464
-input\sources\25\00000025.java: code_after_return at 496
-input\sources\25\00000025.java: code_after_return at 621
-input\sources\25\00000025.java: code_after_return at 686
-input\sources\25\00000025.java: code_after_return at 718
-input\sources\26\00000026.java: package Class1;
-
-/* loaded from: classes2.dex */
-public enum c {
-    APP_START_TRACE_NAME("_as"),
-    ON_CREATE_TRACE_NAME("_astui"),
-    ON -> package Class1;
-
-/* loaded from: classes2.dex */
-public enum c {
-    APP_START_TRACE_NAME("_as"),
-    ON_CREATE_TRACE_NAME("_astui"),
-    ON (Full cleaned file (C-like deadcode removal))
-input\sources\26\00000026.java: code_after_return at 515
-input\sources\27\00000027.java: package F;
-
-import android.net.ConnectivityManager;
-
-/* loaded from: classes.dex */
-public final class a {
-    public static boolean a(Conne -> package F;
-
-import android.net.ConnectivityManager;
-
-/* loaded from: classes.dex */
-public final class a {
-    public static boolean a(Conne (Full cleaned file (C-like deadcode removal))
-input\sources\27\00000027.java: code_after_return at 238
-input\sources\28\00000028.java: package Class1;
-
-/* loaded from: classes.dex */
-public interface a {
-} -> package Class1;
-
-/* loaded from: classes.dex */
-public interface a {
-} (Full cleaned file (C-like deadcode removal))
-input\sources\29\00000029.java: package Class1;
-
-/* loaded from: classes.dex */
-public interface h {
-    void d(int func2, int func1);
-} -> package Class1;
-
-/* loaded from: classes.dex */
-public interface h {
-    void d(int func2, int func1);
-} (Full cleaned file (C-like deadcode removal))
-input\sources\2a\0000002a.java: package C;
-
-import android.os.Binder;
-import android.os.IBinder;
-import android.os.IInterface;
-
-/* loaded from: classes.dex */
-public interf -> package C;
-
-import android.os.Binder;
-import android.os.IBinder;
-import android.os.IInterface;
-
-/* loaded from: classes.dex */
-public interf (Full cleaned file (C-like deadcode removal))
-input\sources\2a\0000002a.java: code_after_return at 1071
-input\sources\2a\0000002a.java: code_after_return at 1205
-input\sources\2a\0000002a.java: code_after_return at 1435
-input\sources\2a\0000002a.java: code_after_return at 1489
-input\sources\2b\0000002b.java: package Class1;
-
-import java.lang.Throwable;
-
-/* loaded from: classes.dex */
-public interface a<TInput, TResult, TException extends Throwabl -> package Class1;
-
-import java.lang.Throwable;
-
-/* loaded from: classes.dex */
-public interface a<TInput, TResult, TException extends Throwabl (Full cleaned file (C-like deadcode removal))
-input\sources\2c\0000002c.java: package Class1;
-
-/* loaded from: classes.dex */
-public interface c<TInput, TResult> {
-    TInput a(TInput tinput, TResult tresult);
-} -> package Class1;
-
-/* loaded from: classes.dex */
-public interface c<TInput, TResult> {
-    TInput a(TInput tinput, TResult tresult);
-} (Full cleaned file (C-like deadcode removal))
-input\sources\2d\0000002d.java: int Capability_queryPatterns = 0; ->  (Removed likely-unused declaration 'Capability_queryPatterns')
-input\sources\2d\0000002d.java: int Capability_shortcutMatchRequired = 1; ->  (Removed likely-unused declaration 'Capability_shortcutMatchRequired')
-input\sources\2d\0000002d.java: int ColorStateListItem_android_alpha = 1; ->  (Removed likely-unused declaration 'ColorStateListItem_android_alpha')
-input\sources\2d\0000002d.java: int ColorStateListItem_android_lStar = 2; ->  (Removed likely-unused declaration 'ColorStateListItem_android_lStar')
-input\sources\2d\0000002d.java: int ColorStateListItem_lStar = 4; ->  (Removed likely-unused declaration 'ColorStateListItem_lStar')
-input\sources\2d\0000002d.java: int FontFamilyFont_android_fontStyle = 2; ->  (Removed likely-unused declaration 'FontFamilyFont_android_fontStyle')
-input\sources\2d\0000002d.java: int FontFamilyFont_android_fontVariationSettings = 4; ->  (Removed likely-unused declaration 'FontFamilyFont_android_fontVariationSettings')
-input\sources\2d\0000002d.java: int FontFamilyFont_android_fontWeight = 1; ->  (Removed likely-unused declaration 'FontFamilyFont_android_fontWeight')
-input\sources\2d\0000002d.java: int FontFamilyFont_fontStyle = 6; ->  (Removed likely-unused declaration 'FontFamilyFont_fontStyle')
-input\sources\2d\0000002d.java: int FontFamilyFont_ttcIndex = 9; ->  (Removed likely-unused declaration 'FontFamilyFont_ttcIndex')
-input\sources\2d\0000002d.java: int FontFamily_fontProviderAuthority = 0; ->  (Removed likely-unused declaration 'FontFamily_fontProviderAuthority')
-input\sources\2d\0000002d.java: int FontFamily_fontProviderFetchStrategy = 2; ->  (Removed likely-unused declaration 'FontFamily_fontProviderFetchStrategy')
-input\sources\2d\0000002d.java: int FontFamily_fontProviderFetchTimeout = 3; ->  (Removed likely-unused declaration 'FontFamily_fontProviderFetchTimeout')
-input\sources\2d\0000002d.java: int FontFamily_fontProviderQuery = 5; ->  (Removed likely-unused declaration 'FontFamily_fontProviderQuery')
-input\sources\2d\0000002d.java: int GradientColorItem_android_color = 0; ->  (Removed likely-unused declaration 'GradientColorItem_android_color')
-input\sources\2d\0000002d.java: int GradientColor_android_centerY = 4; ->  (Removed likely-unused declaration 'GradientColor_android_centerY')
-input\sources\2d\0000002d.java: int GradientColor_android_endColor = 1; ->  (Removed likely-unused declaration 'GradientColor_android_endColor')
-input\sources\2d\0000002d.java: int GradientColor_android_endY = 11; ->  (Removed likely-unused declaration 'GradientColor_android_endY')
-input\sources\2d\0000002d.java: int GradientColor_android_gradientRadius = 5; ->  (Removed likely-unused declaration 'GradientColor_android_gradientRadius')
-input\sources\2d\0000002d.java: int GradientColor_android_startX = 8; ->  (Removed likely-unused declaration 'GradientColor_android_startX')
-input\sources\2d\0000002d.java: int GradientColor_android_startY = 9; ->  (Removed likely-unused declaration 'GradientColor_android_startY')
-input\sources\2d\0000002d.java: int GradientColor_android_tileMode = 6; ->  (Removed likely-unused declaration 'GradientColor_android_tileMode')
-input\sources\2d\0000002d.java: package B;
-
-import com.ojassoft.astrosage.R;
-
-/* loaded from: classes.dex */
-public final class g {
-    public static final int Capability_q -> package B;
-
-import com.ojassoft.astrosage.R;
-
-/* loaded from: classes.dex */
-public final class g {
-    public static final 
-    public stat (Full cleaned file (C-like deadcode removal))
-input\sources\2e\0000002e.java: package Class1;
-
-/* loaded from: classes.dex */
-public final /* synthetic */ class a {
-} -> package Class1;
-
-/* loaded from: classes.dex */
-public final /* synthetic */ class a {
-} (Full cleaned file (C-like deadcode removal))
-input\sources\2f\0000002f.java: package Class1;
-
-import android.app.Activity;
-
-/* loaded from: classes.dex */
-interface i {
-    void a(Activity activity);
-} -> package Class1;
-
-import android.app.Activity;
-
-/* loaded from: classes.dex */
-interface i {
-    void a(Activity activity);
-} (Full cleaned file (C-like deadcode removal))
-input\sources\30\00000030.java: package Class1;
-
-/* loaded from: classes.dex */
-public interface l {
-    void b();
-
-    void d();
-
-    void g();
-} -> package Class1;
-
-/* loaded from: classes.dex */
-public interface l {
-    void b();
-
-    void d();
-
-    void g();
-} (Full cleaned file (C-like deadcode removal))
-input\sources\31\00000031.java: package Class1;
-
-/* loaded from: classes2.dex */
-public final /* synthetic */ class a {
-} -> package Class1;
-
-/* loaded from: classes2.dex */
-public final /* synthetic */ class a {
-} (Full cleaned file (C-like deadcode removal))
-input\sources\32\00000032.java: package Class1;
-
-import android.os.Trace;
-
-/* loaded from: classes.dex */
-final class c {
-    public static void a(String str) {
-        Tra -> package Class1;
-
-import android.os.Trace;
-
-/* loaded from: classes.dex */
-final class c {
-    public static void a(String str) {
-        Tra (Full cleaned file (C-like deadcode removal))
-input\sources\33\00000033.java: package Class1;
-
-/* loaded from: classes2.dex */
-public final /* synthetic */ class a {
-} -> package Class1;
-
-/* loaded from: classes2.dex */
-public final /* synthetic */ class a {
-} (Full cleaned file (C-like deadcode removal))
-input\sources\34\00000034.java: package Class1;
-
-/* loaded from: classes.dex */
-public interface d {
-    boolean a();
-
-    void clear();
-
-    boolean e(d dVar);
-
-    boolea -> package Class1;
-
-/* loaded from: classes.dex */
-public interface d {
-    boolean a();
-
-    void clear();
-
-    boolean e(d dVar);
-
-    boolea (Full cleaned file (C-like deadcode removal))
-input\sources\35\00000035.java: package Class1;
-
-/* loaded from: classes2.dex */
-public class c extends RuntimeException {
-    public c(String str) {
-        super(str);
-   -> package Class1;
-
-/* loaded from: classes2.dex */
-public class c extends RuntimeException {
-    public c(String str) {
-        super(str);
-   (Full cleaned file (C-like deadcode removal))
-input\sources\36\00000036.java: package Class1;
-
-/* loaded from: classes2.dex */
-public final /* synthetic */ class b {
-} -> package Class1;
-
-/* loaded from: classes2.dex */
-public final /* synthetic */ class b {
-} (Full cleaned file (C-like deadcode removal))
-input\sources\37\00000037.java: package Class1;
-
-import java.lang.annotation.ElementType;
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy -> package Class1;
-
-import java.lang.annotation.ElementType;
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy (Full cleaned file (C-like deadcode removal))
-input\sources\38\00000038.java: package Class1;
-
-/* renamed from: Class1.a  reason: case insensitive filesystem */
-/* loaded from: classes.dex */
-public enum EnumC0585a {
-  -> package Class1;
-
-/* renamed from: Class1.a  reason: case insensitive filesystem */
-/* loaded from: classes.dex */
-public enum EnumC0585a {
-  (Full cleaned file (C-like deadcode removal))
-input\sources\39\00000039.java: package Class1;
-
-import java.lang.annotation.ElementType;
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy -> package Class1;
-
-import java.lang.annotation.ElementType;
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy (Full cleaned file (C-like deadcode removal))
-input\sources\3a\0000003a.java: int ColorStateListItem_alpha = 3; ->  (Removed likely-unused declaration 'ColorStateListItem_alpha')
-input\sources\3a\0000003a.java: int ColorStateListItem_android_alpha = 1; ->  (Removed likely-unused declaration 'ColorStateListItem_android_alpha')
-input\sources\3a\0000003a.java: int ColorStateListItem_android_lStar = 2; ->  (Removed likely-unused declaration 'ColorStateListItem_android_lStar')
-input\sources\3a\0000003a.java: int CoordinatorLayout_Layout_android_layout_gravity = 0; ->  (Removed likely-unused declaration 'CoordinatorLayout_Layout_android_layout_gravity')
-input\sources\3a\0000003a.java: int CoordinatorLayout_Layout_layout_behavior = 3; ->  (Removed likely-unused declaration 'CoordinatorLayout_Layout_layout_behavior')
-input\sources\3a\0000003a.java: int CoordinatorLayout_Layout_layout_dodgeInsetEdges = 4; ->  (Removed likely-unused declaration 'CoordinatorLayout_Layout_layout_dodgeInsetEdges')
-input\sources\3a\0000003a.java: int CoordinatorLayout_Layout_layout_keyline = 6; ->  (Removed likely-unused declaration 'CoordinatorLayout_Layout_layout_keyline')
-input\sources\3a\0000003a.java: int CoordinatorLayout_statusBarBackground = 1; ->  (Removed likely-unused declaration 'CoordinatorLayout_statusBarBackground')
-input\sources\3a\0000003a.java: int FontFamilyFont_android_font = 0; ->  (Removed likely-unused declaration 'FontFamilyFont_android_font')
-input\sources\3a\0000003a.java: int FontFamilyFont_android_fontVariationSettings = 4; ->  (Removed likely-unused declaration 'FontFamilyFont_android_fontVariationSettings')
-input\sources\3a\0000003a.java: int FontFamilyFont_android_fontWeight = 1; ->  (Removed likely-unused declaration 'FontFamilyFont_android_fontWeight')
-input\sources\3a\0000003a.java: int FontFamilyFont_font = 5; ->  (Removed likely-unused declaration 'FontFamilyFont_font')
-input\sources\3a\0000003a.java: int FontFamilyFont_fontVariationSettings = 7; ->  (Removed likely-unused declaration 'FontFamilyFont_fontVariationSettings')
-input\sources\3a\0000003a.java: int FontFamily_fontProviderFetchStrategy = 2; ->  (Removed likely-unused declaration 'FontFamily_fontProviderFetchStrategy')
-input\sources\3a\0000003a.java: int FontFamily_fontProviderPackage = 4; ->  (Removed likely-unused declaration 'FontFamily_fontProviderPackage')
-input\sources\3a\0000003a.java: int FontFamily_fontProviderSystemFontFamily = 6; ->  (Removed likely-unused declaration 'FontFamily_fontProviderSystemFontFamily')
-input\sources\3a\0000003a.java: int GradientColorItem_android_color = 0; ->  (Removed likely-unused declaration 'GradientColorItem_android_color')
-input\sources\3a\0000003a.java: int GradientColorItem_android_offset = 1; ->  (Removed likely-unused declaration 'GradientColorItem_android_offset')
-input\sources\3a\0000003a.java: int GradientColor_android_centerColor = 7; ->  (Removed likely-unused declaration 'GradientColor_android_centerColor')
-input\sources\3a\0000003a.java: int GradientColor_android_centerX = 3; ->  (Removed likely-unused declaration 'GradientColor_android_centerX')
-input\sources\3a\0000003a.java: int GradientColor_android_endColor = 1; ->  (Removed likely-unused declaration 'GradientColor_android_endColor')
-input\sources\3a\0000003a.java: int GradientColor_android_endX = 10; ->  (Removed likely-unused declaration 'GradientColor_android_endX')
-input\sources\3a\0000003a.java: int GradientColor_android_gradientRadius = 5; ->  (Removed likely-unused declaration 'GradientColor_android_gradientRadius')
-input\sources\3a\0000003a.java: int GradientColor_android_startX = 8; ->  (Removed likely-unused declaration 'GradientColor_android_startX')
-input\sources\3a\0000003a.java: int GradientColor_android_tileMode = 6; ->  (Removed likely-unused declaration 'GradientColor_android_tileMode')
-input\sources\3a\0000003a.java: package A;
-
-import com.ojassoft.astrosage.R;
-
-/* loaded from: classes.dex */
-public final class c {
-    public static final int ColorStateLi -> package A;
-
-import com.ojassoft.astrosage.R;
-
-/* loaded from: classes.dex */
-public final class c {
-    public static final 
-    public stat (Full cleaned file (C-like deadcode removal))
-input\sources\3b\0000003b.java: package I;
-
-/* loaded from: classes.dex */
-public final /* synthetic */ class l {
-} -> package I;
-
-/* loaded from: classes.dex */
-public final /* synthetic */ class l {
-} (Full cleaned file (C-like deadcode removal))
-input\sources\3c\0000003c.java: package Class1;
-
-/* loaded from: classes2.dex */
-public class a extends Exception {
-    public a(String str) {
-        super(str);
-    }
-} -> package Class1;
-
-/* loaded from: classes2.dex */
-public class a extends Exception {
-    public a(String str) {
-        super(str);
-    }
-} (Full cleaned file (C-like deadcode removal))
-input\sources\3d\0000003d.java: package Class1;
-
-import java.lang.annotation.ElementType;
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy -> package Class1;
-
-import java.lang.annotation.ElementType;
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy (Full cleaned file (C-like deadcode removal))
-input\sources\3e\0000003e.java: package I;
-
-/* loaded from: classes.dex */
-public final /* synthetic */ class m {
-} -> package I;
-
-/* loaded from: classes.dex */
-public final /* synthetic */ class m {
-} (Full cleaned file (C-like deadcode removal))
-input\sources\3f\0000003f.java: package I;
-
-/* loaded from: classes.dex */
-public final /* synthetic */ class n {
-} -> package I;
-
-/* loaded from: classes.dex */
-public final /* synthetic */ class n {
-} (Full cleaned file (C-like deadcode removal))
-input\sources\40\00000040.java: package I;
-
-/* loaded from: classes.dex */
-public final /* synthetic */ class o {
-} -> package I;
-
-/* loaded from: classes.dex */
-public final /* synthetic */ class o {
-} (Full cleaned file (C-like deadcode removal))
-input\sources\41\00000041.java: package Class1;
-
-/* loaded from: classes.dex */
-public enum g {
-    REPLACE,
-    KEEP,
-    APPEND,
-    APPEND_OR_REPLACE
-} -> package Class1;
-
-/* loaded from: classes.dex */
-public enum g {
-    REPLACE,
-    KEEP,
-    APPEND,
-    APPEND_OR_REPLACE
-} (Full cleaned file (C-like deadcode removal))
-input\sources\42\00000042.java: package I;
-
-/* loaded from: classes.dex */
-public final /* synthetic */ class p {
-} -> package I;
-
-/* loaded from: classes.dex */
-public final /* synthetic */ class p {
-} (Full cleaned file (C-like deadcode removal))
-input\sources\43\00000043.java: package Class1;
-
-/* loaded from: classes.dex */
-public final class d {
-    public static <T> void a(T func1, Class<T> cls) {
-        if (fun -> package Class1;
-
-/* loaded from: classes.dex */
-public final class d {
-    public static <T> void a(T func1, Class<T> cls) {
-        if (fun (Full cleaned file (C-like deadcode removal))
-input\sources\43\00000043.java: code_after_return at 173
-input\sources\43\00000043.java: code_after_return at 357
-input\sources\43\00000043.java: code_after_return at 468
-input\sources\43\00000043.java: code_after_return at 622
-input\sources\43\00000043.java: code_after_return at 732
-input\sources\45\00000045.java: package I;
-
-/* loaded from: classes.dex */
-public final /* synthetic */ class r {
-} -> package I;
-
-/* loaded from: classes.dex */
-public final /* synthetic */ class r {
-} (Full cleaned file (C-like deadcode removal))
-input\sources\46\00000046.java: package Class1;
-
-/* loaded from: classes.dex */
-public enum o {
-    NOT_REQUIRED,
-    CONNECTED,
-    UNMETERED,
-    NOT_ROAMING,
-    METERED -> package Class1;
-
-/* loaded from: classes.dex */
-public enum o {
-    NOT_REQUIRED,
-    CONNECTED,
-    UNMETERED,
-    NOT_ROAMING,
-    METERED (Full cleaned file (C-like deadcode removal))
-input\sources\47\00000047.java: package I;
-
-/* loaded from: classes.dex */
-public final /* synthetic */ class s {
-} -> package I;
-
-/* loaded from: classes.dex */
-public final /* synthetic */ class s {
-} (Full cleaned file (C-like deadcode removal))
-input\sources\48\00000048.java: package I;
-
-/* loaded from: classes.dex */
-public final /* synthetic */ class t {
-} -> package I;
-
-/* loaded from: classes.dex */
-public final /* synthetic */ class t {
-} (Full cleaned file (C-like deadcode removal))
-input\sources\49\00000049.java: package Class1;
-
-/* loaded from: classes2.dex */
-public class b extends Exception {
-    public b(String str) {
-        super(str);
-    }
-
-   -> package Class1;
-
-/* loaded from: classes2.dex */
-public class b extends Exception {
-    public b(String str) {
-        super(str);
-    }
-
-   (Full cleaned file (C-like deadcode removal))
-input\sources\4a\0000004a.java: package Class1;
-
-import android.os.Build;
-import android.util.Log;
-
-/* loaded from: classes.dex */
-public final class a {
-    private static -> package Class1;
-
-import android.os.Build;
-import android.util.Log;
-
-/* loaded from: classes.dex */
-public final class a {
-    private static (Full cleaned file (C-like deadcode removal))
-input\sources\4a\0000004a.java: code_after_return at 291
-input\sources\4a\0000004a.java: code_after_return at 323
-input\sources\4a\0000004a.java: code_after_return at 1067
-input\sources\4a\0000004a.java: code_after_return at 1111
-input\sources\4b\0000004b.java: package Class1;
-
-/* loaded from: classes2.dex */
-public final /* synthetic */ class a {
-} -> package Class1;
-
-/* loaded from: classes2.dex */
-public final /* synthetic */ class a {
-} (Full cleaned file (C-like deadcode removal))
-input\sources\4c\0000004c.java: package Class1;
-
-/* loaded from: classes2.dex */
-public class c extends Exception {
-    public c(String str, Throwable th) {
-        super(s -> package Class1;
-
-/* loaded from: classes2.dex */
-public class c extends Exception {
-    public c(String str, Throwable th) {
-        super(s (Full cleaned file (C-like deadcode removal))
-input\sources\4d\0000004d.java: package Class1;
-
-/* loaded from: classes2.dex */
-public interface d {
-    StackTraceElement[] a(StackTraceElement[] stackTraceElementArr);
-} -> package Class1;
-
-/* loaded from: classes2.dex */
-public interface d {
-    StackTraceElement[] a(StackTraceElement[] stackTraceElementArr);
-} (Full cleaned file (C-like deadcode removal))
-input\sources\4e\0000004e.java: package I;
-
-/* loaded from: classes.dex */
-public final /* synthetic */ class u {
-} -> package I;
-
-/* loaded from: classes.dex */
-public final /* synthetic */ class u {
-} (Full cleaned file (C-like deadcode removal))
-input\sources\4f\0000004f.java: package Class1;
-
-/* loaded from: classes2.dex */
-public class d extends Exception {
-    public d(String str, Throwable th) {
-        super(s -> package Class1;
-
-/* loaded from: classes2.dex */
-public class d extends Exception {
-    public d(String str, Throwable th) {
-        super(s (Full cleaned file (C-like deadcode removal))
-input\sources\50\00000050.java: package Class1;
-
-/* loaded from: classes2.dex */
-public interface A {
-    void W(int func1);
-} -> package Class1;
-
-/* loaded from: classes2.dex */
-public interface A {
-    void W(int func1);
-} (Full cleaned file (C-like deadcode removal))
-input\sources\51\00000051.java: package Class1;
-
-/* renamed from: Class1.b  reason: case insensitive filesystem */
-/* loaded from: classes2.dex */
-public interface Abstract -> package Class1;
-
-/* renamed from: Class1.b  reason: case insensitive filesystem */
-/* loaded from: classes2.dex */
-public interface Abstract (Full cleaned file (C-like deadcode removal))
-input\sources\52\00000052.java: package Class1;
-
-/* renamed from: Class1.e  reason: case insensitive filesystem */
-/* loaded from: classes2.dex */
-public interface Abstract -> package Class1;
-
-/* renamed from: Class1.e  reason: case insensitive filesystem */
-/* loaded from: classes2.dex */
-public interface Abstract (Full cleaned file (C-like deadcode removal))
-input\sources\53\00000053.java: package Class1;
-
-/* loaded from: classes2.dex */
-public class e extends Exception {
-    public e(String str, Throwable th) {
-        super(s -> package Class1;
-
-/* loaded from: classes2.dex */
-public class e extends Exception {
-    public e(String str, Throwable th) {
-        super(s (Full cleaned file (C-like deadcode removal))
-input\sources\54\00000054.java: package Class1;
-
-/* renamed from: Class1.f  reason: case insensitive filesystem */
-/* loaded from: classes2.dex */
-public interface Abstract -> package Class1;
-
-/* renamed from: Class1.f  reason: case insensitive filesystem */
-/* loaded from: classes2.dex */
-public interface Abstract (Full cleaned file (C-like deadcode removal))
-input\sources\55\00000055.java: package Class1;
-
-import java.io.Closeable;
-
-/* loaded from: classes.dex */
-public interface i extends Closeable {
-    void G(int func4, long -> package Class1;
-
-import java.io.Closeable;
-
-/* loaded from: classes.dex */
-public interface i extends Closeable {
-    void G(int func4, long (Full cleaned file (C-like deadcode removal))
-input\sources\56\00000056.java: package Class1;
-
-/* renamed from: Class1.g  reason: case insensitive filesystem */
-/* loaded from: classes2.dex */
-public interface Abstract -> package Class1;
-
-/* renamed from: Class1.g  reason: case insensitive filesystem */
-/* loaded from: classes2.dex */
-public interface Abstract (Full cleaned file (C-like deadcode removal))
-input\sources\57\00000057.java: package Class1;
-
-/* renamed from: Class1.h  reason: case insensitive filesystem */
-/* loaded from: classes2.dex */
-public interface Abstract -> package Class1;
-
-/* renamed from: Class1.h  reason: case insensitive filesystem */
-/* loaded from: classes2.dex */
-public interface Abstract (Full cleaned file (C-like deadcode removal))
-input\sources\58\00000058.java: package Class1;
-
-import android.graphics.Canvas;
-
-/* loaded from: classes2.dex */
-public class a {
-
-    /* renamed from: Class1.a$a  reason: -> package Class1;
-
-import android.graphics.Canvas;
-
-/* loaded from: classes2.dex */
-public class a {
-
-    /* renamed from: Class1.a$a  reason: (Full cleaned file (C-like deadcode removal))
-input\sources\58\00000058.java: code_after_return at 470
-input\sources\59\00000059.java: package Class1;
-
-/* loaded from: classes.dex */
-public interface f {
-    byte[] getExtras();
-
-    String getName();
-} -> package Class1;
-
-/* loaded from: classes.dex */
-public interface f {
-    byte[] getExtras();
-
-    String getName();
-} (Full cleaned file (C-like deadcode removal))
-input\sources\5a\0000005a.java: package Class1;
-
-/* loaded from: classes2.dex */
-public interface B {
-    void F(int func1);
-} -> package Class1;
-
-/* loaded from: classes2.dex */
-public interface B {
-    void F(int func1);
-} (Full cleaned file (C-like deadcode removal))
-input\sources\5b\0000005b.java: package I;
-
-/* loaded from: classes.dex */
-public final /* synthetic */ class v {
-} -> package I;
-
-/* loaded from: classes.dex */
-public final /* synthetic */ class v {
-} (Full cleaned file (C-like deadcode removal))
-input\sources\5c\0000005c.java: package Class1;
-
-/* loaded from: classes2.dex */
-public class f extends Exception {
-    public f(String str, Throwable th) {
-        super(s -> package Class1;
-
-/* loaded from: classes2.dex */
-public class f extends Exception {
-    public f(String str, Throwable th) {
-        super(s (Full cleaned file (C-like deadcode removal))
-input\sources\5d\0000005d.java: package Class1;
-
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Map;
-
-/* loaded from: classes2.dex */
-public class -> package Class1;
-
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Map;
-
-/* loaded from: classes2.dex */
-public class (Full cleaned file (C-like deadcode removal))
-input\sources\5d\0000005d.java: code_after_return at 464
-input\sources\5e\0000005e.java: package Class1;
-
-/* loaded from: classes.dex */
-public interface r {
-
-    /* renamed from: a  reason: collision with root package name */
-   -> package Class1;
-
-/* loaded from: classes.dex */
-public interface r {
-
-    /* renamed from: a  reason: collision with root package name */
-   (Full cleaned file (C-like deadcode removal))
-input\sources\5e\0000005e.java: code_after_return at 747
-input\sources\5e\0000005e.java: code_after_return at 869
-input\sources\5e\0000005e.java: code_after_return at 1197
-input\sources\5e\0000005e.java: code_after_return at 1423
-input\sources\5f\0000005f.java: package Class1;
-
-import java.lang.Comparable;
-import java.util.Comparator;
-
-/* loaded from: classes2.dex */
-public class l<A extends Compara -> package Class1;
-
-import java.lang.Comparable;
-import java.util.Comparator;
-
-/* loaded from: classes2.dex */
-public class l<A extends Compara (Full cleaned file (C-like deadcode removal))
-input\sources\5f\0000005f.java: code_after_return at 396
-input\sources\5f\0000005f.java: code_after_return at 511
-input\sources\60\00000060.java: package Class1;
-
-/* loaded from: classes2.dex */
-public interface i {
-    String a();
-} -> package Class1;
-
-/* loaded from: classes2.dex */
-public interface i {
-    String a();
-} (Full cleaned file (C-like deadcode removal))
-input\sources\61\00000061.java: package Class1;
-
-import java.lang.annotation.ElementType;
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy -> package Class1;
-
-import java.lang.annotation.ElementType;
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy (Full cleaned file (C-like deadcode removal))
-input\sources\62\00000062.java: package Class1;
-
-import android.os.Bundle;
-
-/* loaded from: classes2.dex */
-public interface a {
-    void g(Bundle bundle);
-
-    void l(Bund -> package Class1;
-
-import android.os.Bundle;
-
-/* loaded from: classes2.dex */
-public interface a {
-    void g(Bundle bundle);
-
-    void l(Bund (Full cleaned file (C-like deadcode removal))
-input\sources\63\00000063.java: package G;
-
-import android.os.Handler;
-import android.os.Looper;
-
-/* loaded from: classes.dex */
-class b {
-    /* JADX INFO: Access modifier -> package G;
-
-import android.os.Handler;
-import android.os.Looper;
-
-/* loaded from: classes.dex */
-class b {
-    /* JADX INFO: Access modifier (Full cleaned file (C-like deadcode removal))
-input\sources\63\00000063.java: code_after_return at 303
-input\sources\63\00000063.java: code_after_return at 343
-input\sources\64\00000064.java: package Class1;
-
-/* loaded from: classes2.dex */
-public final /* synthetic */ class b {
-} -> package Class1;
-
-/* loaded from: classes2.dex */
-public final /* synthetic */ class b {
-} (Full cleaned file (C-like deadcode removal))
-input\sources\65\00000065.java: package Class1;
-
-/* loaded from: classes2.dex */
-public final /* synthetic */ class c {
-} -> package Class1;
-
-/* loaded from: classes2.dex */
-public final /* synthetic */ class c {
-} (Full cleaned file (C-like deadcode removal))
-input\sources\66\00000066.java: int ViewPager2_android_orientation = 0; ->  (Removed likely-unused declaration 'ViewPager2_android_orientation')
-input\sources\66\00000066.java: package Class1;
-
-/* loaded from: classes.dex */
-public final class a {
-    public static final int[] ViewPager2 = {16842948};
-    public sta -> package Class1;
-
-/* loaded from: classes.dex */
-public final class a {
-    public static final int[] ViewPager2 = {16842948};
-    public sta (Full cleaned file (C-like deadcode removal))
-input\sources\67\00000067.java: package I;
-
-/* loaded from: classes.dex */
-public final /* synthetic */ class w {
-} -> package I;
-
-/* loaded from: classes.dex */
-public final /* synthetic */ class w {
-} (Full cleaned file (C-like deadcode removal))
-input\sources\68\00000068.java: package Class1;
-
-/* loaded from: classes.dex */
-public interface b<R> {
-
-    /* loaded from: classes.dex */
-    public interface a {
-    }
-
- -> package Class1;
-
-/* loaded from: classes.dex */
-public interface b<R> {
-
-    /* loaded from: classes.dex */
-    public interface a {
-    }
-
- (Full cleaned file (C-like deadcode removal))
-input\sources\69\00000069.java: package I;
-
-/* loaded from: classes.dex */
-public final /* synthetic */ class x {
-} -> package I;
-
-/* loaded from: classes.dex */
-public final /* synthetic */ class x {
-} (Full cleaned file (C-like deadcode removal))
-input\sources\6a\0000006a.java: package I;
-
-/* loaded from: classes.dex */
-public final /* synthetic */ class y {
-} -> package I;
-
-/* loaded from: classes.dex */
-public final /* synthetic */ class y {
-} (Full cleaned file (C-like deadcode removal))
-input\sources\6b\0000006b.java: package Class1;
-
-/* renamed from: Class1.b  reason: case insensitive filesystem */
-/* loaded from: classes.dex */
-public interface AbstractC -> package Class1;
-
-/* renamed from: Class1.b  reason: case insensitive filesystem */
-/* loaded from: classes.dex */
-public interface AbstractC (Full cleaned file (C-like deadcode removal))
-input\sources\6c\0000006c.java: package Class1;
-
-/* loaded from: classes2.dex */
-public class c {
-
-    /* renamed from: a  reason: collision with root package name */
-    p -> package Class1;
-
-/* loaded from: classes2.dex */
-public class c {
-
-    /* renamed from: a  reason: collision with root package name */
-    p (Full cleaned file (C-like deadcode removal))
-input\sources\6c\0000006c.java: code_after_return at 415
-input\sources\6c\0000006c.java: code_after_return at 470
-input\sources\6d\0000006d.java: package Class1;
-
-/* loaded from: classes.dex */
-public final /* synthetic */ class e {
-    public static /* synthetic */ int a(boolean func1 -> package Class1;
-
-/* loaded from: classes.dex */
-public final /* synthetic */ class e {
-    public static /* synthetic */ int a(boolean func1 (Full cleaned file (C-like deadcode removal))
-input\sources\6d\0000006d.java: code_after_return at 189
-input\sources\6d\0000006d.java: code_after_return at 220
-input\sources\6e\0000006e.java: package Class1;
-
-/* loaded from: classes.dex */
-public enum s {
-    RUN_AS_NON_EXPEDITED_WORK_REQUEST,
-    DROP_WORK_REQUEST
-} -> package Class1;
-
-/* loaded from: classes.dex */
-public enum s {
-    RUN_AS_NON_EXPEDITED_WORK_REQUEST,
-    DROP_WORK_REQUEST
-} (Full cleaned file (C-like deadcode removal))
-input\sources\6f\0000006f.java: package Class1;
-
-/* loaded from: classes3.dex */
-public final class c {
-    private static final int a(int func6, int func1, int func4) {
-   -> package Class1;
-
-/* loaded from: classes3.dex */
-public final class c {
-    private static final int a(int func6, int func1, int func4) {
-   (Full cleaned file (C-like deadcode removal))
-input\sources\6f\0000006f.java: code_after_return at 197
-input\sources\6f\0000006f.java: code_after_return at 334
-input\sources\6f\0000006f.java: code_after_return at 519
-input\sources\6f\0000006f.java: code_after_return at 559
-input\sources\6f\0000006f.java: code_after_return at 680
-input\sources\6f\0000006f.java: code_after_return at 720
-input\sources\6f\0000006f.java: code_after_return at 1064
-input\sources\6f\0000006f.java: code_after_return at 1104
-input\sources\6f\0000006f.java: code_after_return at 1225
-input\sources\6f\0000006f.java: code_after_return at 1265
-input\sources\6f\0000006f.java: code_after_return at 1513
-input\sources\6f\0000006f.java: code_after_return at 1545
-input\sources\6f\0000006f.java: code_after_return at 1705
-input\sources\6f\0000006f.java: code_after_return at 1737
-input\sources\70\00000070.java: package Class1;
-
-/* loaded from: classes2.dex */
-public final /* synthetic */ class E {
-} -> package Class1;
-
-/* loaded from: classes2.dex */
-public final /* synthetic */ class E {
-} (Full cleaned file (C-like deadcode removal))
-input\sources\71\00000071.java: package Class1;
-
-import java.util.NoSuchElementException;
-
-/* loaded from: classes2.dex */
-public final class g<T> {
-
-    /* renamed from: a -> package Class1;
-
-import java.util.NoSuchElementException;
-
-/* loaded from: classes2.dex */
-public final class g<T> {
-
-    /* renamed from: a (Full cleaned file (C-like deadcode removal))
-input\sources\71\00000071.java: code_after_return at 324
-input\sources\71\00000071.java: code_after_return at 405
-input\sources\71\00000071.java: code_after_return at 483
-input\sources\71\00000071.java: code_after_return at 594
-input\sources\71\00000071.java: code_after_return at 757
-input\sources\71\00000071.java: code_after_return at 789
-input\sources\71\00000071.java: code_after_return at 902
 
 
 
 ===== Inline Expansion =====
 
+input\00000021.py: import base64
+import unittest
+import builtins
+
+def api_redirection(a, b):
+
+    def _real_api_add(x, y):
+        return x + y
+
+    def _wrapp -> import base64
+import unittest
+import builtins
+
+def api_redirection(a, b):
+
+    def _real_api_add(x, y):
+        return x + y
+
+    def _wrapp (Full cleaned file (Python inline folding))
+input\00000021.py: const-arith '3 + 6'
 input\api_redirection.py: """
 Detect API redirection/wrapper patterns:
   - tiny wrappers that call another function and do nothing else
@@ -2265,17 +259,17 @@ Detect API redirection/wrapper patterns:
   - tiny wrappers that call another function and do nothing else
   - multiple-level wrappers
 Cl (Full cleaned file (Python inline folding))
-input\controlFlow.py: # -------------------- controlflow.py --------------------
-import re
+input\controlFlow.py: import re
 from typing import List, Dict, Tuple
 
 class FakeConditionCleaner:
-    " -> # -------------------- controlflow.py --------------------
-import re
+    """
+    Detect and clean fake/unreachable conditions from so -> import re
 from typing import List, Dict, Tuple
 
 class FakeConditionCleaner:
-    " (parse_error: invalid syntax. Perhaps you forgot a comma? (<unknown>, line 46))
+    """
+    Detect and clean fake/unreachable conditions from so (Full cleaned file (Python inline folding))
 input\controlflow_flattening.py: '// Suggested deobfuscated sequence\n' + '/* case1 */\n' -> '// Suggested deobfuscated sequence\n/* case1 */\n' (Constant folded)
 input\controlflow_flattening.py: """
 Detect/control-flow flattening patterns (dispatcher loops, state-machine switch inside loop).
@@ -2283,7 +277,7 @@ Conservative detection + optional simple u -> """
 Detect/control-flow flattening patterns (dispatcher loops, state-machine switch inside loop).
 Conservative detection + optional simple u (Full cleaned file (Python inline folding))
 input\controlflow_flattening.py: const-arith '2-3'
-input\deadCode.py: """# Dead Code Test Cases
+input\deadcode.py: """# Dead Code Test Cases
 
 # 1. Unused variable
 x = 10   # dead
@@ -2365,28 +359,22 @@ input\nameIdentifier.py: import re
 import ast
 import keyword
 import builtins
-
-# ----------------------------------------
-# Reserved keywords for multiple languages
-# -> import re
+LANG_KEYWORDS = {'python': set(keyword.kwlist) | set(dir(builtins)), 'c': {'auto', 'brea -> import re
 import ast
 import keyword
 import builtins
+LANG_KEYWORDS = {'python': set(keyword.kwlist) | set(dir(builtins)), 'c': {'auto', 'brea (Full cleaned file (Python inline folding))
+input\opaque_predicate.py: """for i in range(2):
+    if (2 + 2 == 4) and (3 > 1):
+        print("Loop always true:", i)
 
-# ----------------------------------------
-# Reserved keywords for multiple languages
-# (parse_error: unmatched ')' (<unknown>, line 50))
-input\opaque_predicate.py: # Opaque Predicate Complex Test Cases
+# 2. Always false predicate (never executes)
+f -> """for i in range(2):
+    if (2 + 2 == 4) and (3 > 1):
+        print("Loop always true:", i)
 
-# 1. Always true with redundant check inside loop
-
-"""for i in range(2):
-    if (2 + 2 == 4) and (3 > -> # Opaque Predicate Complex Test Cases
-
-# 1. Always true with redundant check inside loop
-
-"""for i in range(2):
-    if (2 + 2 == 4) and (3 > (parse_error: invalid syntax (<unknown>, line 100))
+# 2. Always false predicate (never executes)
+f (Full cleaned file (Python inline folding))
 input\opaque_predicate.py: const-arith '2 + 2'
 input\opaque_predicate.py: const-arith '2 * 3'
 input\opaque_predicate.py: const-arith '4 - 1'
@@ -2413,6 +401,25 @@ input\stringEncryption.py: const-arith '0-9'
 
 ===== Opaque Predicates =====
 
+input\00000021.py: import base64
+import unittest
+import builtins
+
+def api_redirection(a, b):
+
+    def _real_api_add(x, y):
+        return x + y
+
+    def _wrapp -> import base64
+import unittest
+import builtins
+
+def api_redirection(a, b):
+
+    def _real_api_add(x, y):
+        return x + y
+
+    def _wrapp (Full cleaned file (Python opaque predicate simplification))
 input\api_redirection.py: """
 Detect API redirection/wrapper patterns:
   - tiny wrappers that call another function and do nothing else
@@ -2422,23 +429,23 @@ Detect API redirection/wrapper patterns:
   - tiny wrappers that call another function and do nothing else
   - multiple-level wrappers
 Cl (Full cleaned file (Python opaque predicate simplification))
-input\controlFlow.py: # -------------------- controlflow.py --------------------
-import re
+input\controlFlow.py: import re
 from typing import List, Dict, Tuple
 
 class FakeConditionCleaner:
-    " -> # -------------------- controlflow.py --------------------
-import re
+    """
+    Detect and clean fake/unreachable conditions from so -> import re
 from typing import List, Dict, Tuple
 
 class FakeConditionCleaner:
-    " (parse_error: invalid syntax. Perhaps you forgot a comma? (<unknown>, line 46))
+    """
+    Detect and clean fake/unreachable conditions from so (Full cleaned file (Python opaque predicate simplification))
 input\controlflow_flattening.py: """
 Detect/control-flow flattening patterns (dispatcher loops, state-machine switch inside loop).
 Conservative detection + optional simple u -> """
 Detect/control-flow flattening patterns (dispatcher loops, state-machine switch inside loop).
 Conservative detection + optional simple u (Full cleaned file (Python opaque predicate simplification))
-input\deadCode.py: """# Dead Code Test Cases
+input\deadcode.py: """# Dead Code Test Cases
 
 # 1. Unused variable
 x = 10   # dead
@@ -2504,28 +511,22 @@ input\nameIdentifier.py: import re
 import ast
 import keyword
 import builtins
-
-# ----------------------------------------
-# Reserved keywords for multiple languages
-# -> import re
+LANG_KEYWORDS = {'python': set(keyword.kwlist) | set(dir(builtins)), 'c': {'auto', 'brea -> import re
 import ast
 import keyword
 import builtins
+LANG_KEYWORDS = {'python': set(keyword.kwlist) | set(dir(builtins)), 'c': {'auto', 'brea (Full cleaned file (Python opaque predicate simplification))
+input\opaque_predicate.py: """for i in range(2):
+    if (2 + 2 == 4) and (3 > 1):
+        print("Loop always true:", i)
 
-# ----------------------------------------
-# Reserved keywords for multiple languages
-# (parse_error: unmatched ')' (<unknown>, line 50))
-input\opaque_predicate.py: # Opaque Predicate Complex Test Cases
+# 2. Always false predicate (never executes)
+f -> """for i in range(2):
+    if (2 + 2 == 4) and (3 > 1):
+        print("Loop always true:", i)
 
-# 1. Always true with redundant check inside loop
-
-"""for i in range(2):
-    if (2 + 2 == 4) and (3 > -> # Opaque Predicate Complex Test Cases
-
-# 1. Always true with redundant check inside loop
-
-"""for i in range(2):
-    if (2 + 2 == 4) and (3 > (parse_error: invalid syntax (<unknown>, line 100))
+# 2. Always false predicate (never executes)
+f (Full cleaned file (Python opaque predicate simplification))
 input\opaque_predicate.py: constant-compare '2 + 2 == 4'
 input\opaque_predicate.py: constant-compare '2 * 3 == 6'
 input\opaque_predicate.py: constant-compare '4 - 1 == 3'
@@ -2547,18 +548,13 @@ def xor_decrypt(enc_list, key=42):
 
 ===== Control Flow Flattening =====
 
+input\00000021.py:  ->  (Detected Python flattened control-flow patterns. Manual reconstruction recommended.)
+input\00000021.py: goto/switch/state-like patterns present
 input\controlflow_flattening.py:  ->  (Detected Python flattened control-flow patterns. Manual reconstruction recommended.)
 input\controlflow_flattening.py: goto/switch/state-like patterns present
-input\deadCode.py: goto/switch/state-like patterns present
+input\deadcode.py: goto/switch/state-like patterns present
 input\inlineExpansion.py:  ->  (Detected Python flattened control-flow patterns. Manual reconstruction recommended.)
 input\nameIdentifier.py: goto/switch/state-like patterns present
-input\sources\38\00000038.java: goto/switch/state-like patterns present
-input\sources\51\00000051.java: goto/switch/state-like patterns present
-input\sources\52\00000052.java: goto/switch/state-like patterns present
-input\sources\54\00000054.java: goto/switch/state-like patterns present
-input\sources\56\00000056.java: goto/switch/state-like patterns present
-input\sources\57\00000057.java: goto/switch/state-like patterns present
-input\sources\6b\0000006b.java: goto/switch/state-like patterns present
 
 
 
@@ -2584,39 +580,22 @@ Detect instruction substitution like:
 
 ===== Dynamic Code Loading =====
 
-input\controlFlow.py:  ->  (Detected dynamic constructs (eval/exec/compile/reflection). Manual review required: [{'type': 'dynamic_py', 'lineno': 17, 'snippet': 'compile(', 'reason': 'dynamic execution/reflection'}, {'type': 'dynamic_py', 'lineno': 18, 'snippet': 'compile(', 'reason': 'dynamic execution/reflection'}, {'type': 'dynamic_py', 'lineno': 19, 'snippet': 'compile(', 'reason': 'dynamic execution/reflection'}, {'type': 'dynamic_py', 'lineno': 24, 'snippet': 'compile(', 'reason': 'dynamic execution/reflection'}, {'type': 'dynamic_py', 'lineno': 25, 'snippet': 'compile(', 'reason': 'dynamic execution/reflection'}, {'type': 'dynamic_py', 'lineno': 26, 'snippet': 'compile(', 'reason': 'dynamic execution/reflection'}])
+input\00000021.py:  ->  (Detected dynamic constructs (eval/exec/compile/reflection). Manual review required: [{'type': 'dynamic_py', 'lineno': 81, 'snippet': 'getattr(', 'reason': 'dynamic execution/reflection'}])
+input\controlFlow.py:  ->  (Detected dynamic constructs (eval/exec/compile/reflection). Manual review required: [{'type': 'dynamic_py', 'lineno': 14, 'snippet': 'compile(', 'reason': 'dynamic execution/reflection'}, {'type': 'dynamic_py', 'lineno': 14, 'snippet': 'compile(', 'reason': 'dynamic execution/reflection'}, {'type': 'dynamic_py', 'lineno': 14, 'snippet': 'compile(', 'reason': 'dynamic execution/reflection'}, {'type': 'dynamic_py', 'lineno': 15, 'snippet': 'compile(', 'reason': 'dynamic execution/reflection'}, {'type': 'dynamic_py', 'lineno': 15, 'snippet': 'compile(', 'reason': 'dynamic execution/reflection'}, {'type': 'dynamic_py', 'lineno': 15, 'snippet': 'compile(', 'reason': 'dynamic execution/reflection'}])
 input\controlflow_flattening.py:  ->  (Detected dynamic constructs (eval/exec/compile/reflection). Manual review required: [{'type': 'dynamic_py', 'lineno': 11, 'snippet': 'compile(', 'reason': 'dynamic execution/reflection'}])
-input\deadCode.py:  ->  (Detected dynamic constructs (eval/exec/compile/reflection). Manual review required: [{'type': 'dynamic_py', 'lineno': 228, 'snippet': 'compile(', 'reason': 'dynamic execution/reflection'}, {'type': 'dynamic_py', 'lineno': 237, 'snippet': 'compile(', 'reason': 'dynamic execution/reflection'}, {'type': 'dynamic_py', 'lineno': 252, 'snippet': 'compile(', 'reason': 'dynamic execution/reflection'}, {'type': 'dynamic_py', 'lineno': 129, 'snippet': 'getattr(', 'reason': 'dynamic execution/reflection'}, {'type': 'dynamic_py', 'lineno': 144, 'snippet': 'getattr(', 'reason': 'dynamic execution/reflection'}])
+input\deadcode.py:  ->  (Detected dynamic constructs (eval/exec/compile/reflection). Manual review required: [{'type': 'dynamic_py', 'lineno': 228, 'snippet': 'compile(', 'reason': 'dynamic execution/reflection'}, {'type': 'dynamic_py', 'lineno': 237, 'snippet': 'compile(', 'reason': 'dynamic execution/reflection'}, {'type': 'dynamic_py', 'lineno': 252, 'snippet': 'compile(', 'reason': 'dynamic execution/reflection'}, {'type': 'dynamic_py', 'lineno': 129, 'snippet': 'getattr(', 'reason': 'dynamic execution/reflection'}, {'type': 'dynamic_py', 'lineno': 144, 'snippet': 'getattr(', 'reason': 'dynamic execution/reflection'}])
 input\dynamic_loading.py:  ->  (Detected dynamic constructs (eval/exec/compile/reflection). Manual review required: [{'type': 'dynamic_py', 'lineno': 11, 'snippet': 'compile(', 'reason': 'dynamic execution/reflection'}, {'type': 'dynamic_py', 'lineno': 11, 'snippet': 'compile(', 'reason': 'dynamic execution/reflection'}, {'type': 'dynamic_py', 'lineno': 11, 'snippet': 'compile(', 'reason': 'dynamic execution/reflection'}, {'type': 'dynamic_py', 'lineno': 11, 'snippet': 'compile(', 'reason': 'dynamic execution/reflection'}, {'type': 'dynamic_py', 'lineno': 11, 'snippet': 'compile(', 'reason': 'dynamic execution/reflection'}, {'type': 'dynamic_py', 'lineno': 11, 'snippet': 'compile(', 'reason': 'dynamic execution/reflection'}])
 input\dynamic_loading.py: reflection/dynamic API: Class.forName
 input\inlineExpansion.py:  ->  (Detected dynamic constructs (eval/exec/compile/reflection). Manual review required: [{'type': 'dynamic_py', 'lineno': 153, 'snippet': 'compile(', 'reason': 'dynamic execution/reflection'}])
 input\instruction_substitution.py:  ->  (Detected dynamic constructs (eval/exec/compile/reflection). Manual review required: [{'type': 'dynamic_py', 'lineno': 11, 'snippet': 'compile(', 'reason': 'dynamic execution/reflection'}, {'type': 'dynamic_py', 'lineno': 11, 'snippet': 'compile(', 'reason': 'dynamic execution/reflection'}, {'type': 'dynamic_py', 'lineno': 11, 'snippet': 'compile(', 'reason': 'dynamic execution/reflection'}, {'type': 'dynamic_py', 'lineno': 11, 'snippet': 'compile(', 'reason': 'dynamic execution/reflection'}, {'type': 'dynamic_py', 'lineno': 32, 'snippet': 'compile(', 'reason': 'dynamic execution/reflection'}, {'type': 'dynamic_py', 'lineno': 32, 'snippet': 'compile(', 'reason': 'dynamic execution/reflection'}])
-input\opaque_predicate.py:  ->  (Detected dynamic constructs (eval/exec/compile/reflection). Manual review required: [{'type': 'dynamic_py', 'lineno': 198, 'snippet': 'eval(', 'reason': 'dynamic execution/reflection'}, {'type': 'dynamic_py', 'lineno': 189, 'snippet': 'compile(', 'reason': 'dynamic execution/reflection'}, {'type': 'dynamic_py', 'lineno': 231, 'snippet': 'compile(', 'reason': 'dynamic execution/reflection'}])
+input\opaque_predicate.py:  ->  (Detected dynamic constructs (eval/exec/compile/reflection). Manual review required: [{'type': 'dynamic_py', 'lineno': 198, 'snippet': 'eval(', 'reason': 'dynamic execution/reflection'}, {'type': 'dynamic_py', 'lineno': 192, 'snippet': 'compile(', 'reason': 'dynamic execution/reflection'}, {'type': 'dynamic_py', 'lineno': 235, 'snippet': 'compile(', 'reason': 'dynamic execution/reflection'}])
 input\stringEncryption.py:  ->  (Detected dynamic constructs (eval/exec/compile/reflection). Manual review required: [{'type': 'dynamic_py', 'lineno': 18, 'snippet': 'compile(', 'reason': 'dynamic execution/reflection'}])
-input\sources\71\00000071.java: if (func2 == null) {
-            return a();
-        } ->  (Removed trivial wrapper if -> inlined calls to a())
-input\sources\71\00000071.java: package Class1;
-
-import java.util.NoSuchElementException;
-
-/* loaded from: classes2.dex */
-public final class g<T> {
-
-    /* renamed from: a -> package Class1;
-
-import java.util.NoSuchElementException;
-
-/* loaded from: classes2.dex */
-public final class g<T> {
-
-    /* renamed from: a (Inlined trivial wrapper (C-like))
 
 
 
 ===== Junk Code =====
 
-input\deadCode.py: """# Dead Code Test Cases
+input\deadcode.py: """# Dead Code Test Cases
 
 # 1. Unused variable
 x = 10   # dead
@@ -2644,936 +623,31 @@ Detect/remove junk code: NOPs, identity operations, redundant arithmetic, dead s
 Conservative cleaning:  (Removed identity addition (x = x + 0).)
 input\junkcode.py: smali NOP found
 input\mixed_language.py: smali NOP found
-input\opaque_predicate.py: # Opaque Predicate Complex Test Cases
-
-# 1. Always true with redundant check inside loop
-
-"""for i in range(2):
-    if (2 + 2 == 4) and (3 > -> # Opaque Predicate Complex Test Cases
-
-# 1. Always true with redundant check inside loop
-
-"""for i in range(2):
-    if (2 + 2 == 4) and (3 > (Removed redundant pass statements)
-input\sources\00\00000000.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\01\00000001.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\02\00000002.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\03\00000003.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\04\00000004.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\05\00000005.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\06\00000006.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\07\00000007.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\08\00000008.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\09\00000009.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\0a\0000000a.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\0b\0000000b.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\0c\0000000c.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\0d\0000000d.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\0e\0000000e.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\0f\0000000f.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\10\00000010.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\11\00000011.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\12\00000012.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\13\00000013.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\14\00000014.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\15\00000015.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\16\00000016.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\17\00000017.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\18\00000018.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\19\00000019.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\1a\0000001a.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\1b\0000001b.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\1c\0000001c.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\1d\0000001d.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\1e\0000001e.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\1f\0000001f.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\20\00000020.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\21\00000021.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\22\00000022.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\23\00000023.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\24\00000024.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\25\00000025.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\26\00000026.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\27\00000027.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\28\00000028.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\29\00000029.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\2a\0000002a.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\2b\0000002b.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\2c\0000002c.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\2d\0000002d.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\2e\0000002e.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\2f\0000002f.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\30\00000030.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\31\00000031.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\32\00000032.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\33\00000033.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\34\00000034.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\35\00000035.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\36\00000036.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\37\00000037.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\38\00000038.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\39\00000039.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\3a\0000003a.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\3b\0000003b.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\3c\0000003c.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\3d\0000003d.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\3e\0000003e.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\3f\0000003f.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\40\00000040.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\41\00000041.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\42\00000042.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\43\00000043.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\45\00000045.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\46\00000046.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\47\00000047.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\48\00000048.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\49\00000049.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\4a\0000004a.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\4b\0000004b.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\4c\0000004c.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\4d\0000004d.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\4e\0000004e.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\4f\0000004f.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\50\00000050.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\51\00000051.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\52\00000052.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\53\00000053.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\54\00000054.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\55\00000055.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\56\00000056.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\57\00000057.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\58\00000058.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\59\00000059.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\5a\0000005a.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\5b\0000005b.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\5c\0000005c.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\5d\0000005d.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\5e\0000005e.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\5f\0000005f.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\60\00000060.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\61\00000061.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\62\00000062.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\63\00000063.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\64\00000064.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\65\00000065.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\66\00000066.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\67\00000067.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\68\00000068.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\69\00000069.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\6a\0000006a.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\6b\0000006b.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\6c\0000006c.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\6d\0000006d.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\6e\0000006e.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\6f\0000006f.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\70\00000070.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
-input\sources\71\00000071.java: Error - Traceback (most recent call last):
-  File "C:\Users\asus\hack proj\merge.py", line 1881, in analyze_file
-    changes = py_fn(text) if lang == "python" else clike_fn(text)
-                                                   ~~~~~~~~^^^^^^
-  File "C:\Users\asus\hack proj\input\junkcode.py", line 41, in clean_junk_code_clike
-    s_new = re.sub(r'\b([A-Za-z_]\w*)\s*=\s*\1\s*\*\s*1\s*;', s_new)
-TypeError: sub() missing 1 required positional argument: 'string'
-
+input\opaque_predicate.py: """for i in range(2):
+    if (2 + 2 == 4) and (3 > 1):
+        print("Loop always true:", i)
+
+# 2. Always false predicate (never executes)
+f -> """for i in range(2):
+    if (2 + 2 == 4) and (3 > 1):
+        print("Loop always true:", i)
+
+# 2. Always false predicate (never executes)
+f (Removed redundant pass statements)
 
 
 
 ===== API Redirection =====
 
+input\00000021.py: wrapper-call-like: return _real_api_add(
+input\00000021.py: wrapper-call-like: return _wrapper(
+input\00000021.py: wrapper-call-like: return b(
+input\00000021.py: wrapper-call-like: return func(
 input\inlineExpansion.py: wrapper-call-like: return str(
 input\nameIdentifier.py: wrapper-call-like: return bool(
 input\opaque_predicate.py: wrapper-call-like: return all(
 input\opaque_predicate.py: wrapper-call-like: return any(
 input\opaque_predicate.py: wrapper-call-like: return eval(
-input\sources\01\00000001.java: wrapper-call-like: return d(
-input\sources\4a\0000004a.java: wrapper-call-like: return a(
-input\sources\6f\0000006f.java: wrapper-call-like: return e(
-input\sources\6f\0000006f.java: wrapper-call-like: return f(
-input\sources\71\00000071.java: wrapper-call-like: return e(
 
 
 
@@ -3585,6 +659,6 @@ No cases detected.
 
 ===== Identifier Obfuscation =====
 
-input\deadCode.py: many short identifiers (36) — possible ProGuard renames
-input\opaque_predicate.py: many short identifiers (36) — possible ProGuard renames
+input\deadcode.py: many short identifiers (36) — possible ProGuard renames
+input\opaque_predicate.py: many short identifiers (32) — possible ProGuard renames
 

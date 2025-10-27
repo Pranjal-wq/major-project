@@ -1656,7 +1656,7 @@ import traceback
 from input.nameIdentifier import IdentifierCleaner, detect_language
 from input.controlFlow import FakeConditionCleaner
 from input.stringEncryption import StringDecryptor
-from input.deadCode import clean_deadcode_python, clean_deadcode_clike
+from input.deadcode import clean_deadcode_python, clean_deadcode_clike
 from input.inlineExpansion import clean_inline_expansion_python, clean_inline_expansion_clike
 from input.opaque_predicate import clean_opaque_predicate_python, clean_opaque_predicate_clike
 from input.controlflow_flattening import clean_controlflow_flattening_python, clean_controlflow_flattening_clike
@@ -1835,14 +1835,66 @@ def analyze_file(filepath):
 
     lang = detect_language(os.path.basename(filepath))
 
-    # String decryption
+    # # String decryption
+    # try:
+    #     str_cleaner = StringDecryptor()
+    #     str_changes, text = str_cleaner.detect_and_clean(text)
+    #     for c in str_changes:
+    #         per_file["String Encryption"].append(f"{filepath}: {c.get('original','')} -> {c.get('decrypted','')} ({c.get('reason','')})")
+    # except Exception as e:
+    #     per_file["String Encryption"].append(f"{filepath}: Error - {e}")
+        # String decryption (now include original source line + deobfuscated line in reporting)
     try:
         str_cleaner = StringDecryptor()
         str_changes, text = str_cleaner.detect_and_clean(text)
         for c in str_changes:
-            per_file["String Encryption"].append(f"{filepath}: {c.get('original','')} -> {c.get('decrypted','')} ({c.get('reason','')})")
+            # include the source line that contained the obfuscated literal and the cleaned version
+            orig_line = c.get('original_line', '').strip()
+            cleaned_line = c.get('cleaned_line', '').strip()
+            # trim very long lines for report readability
+            maxlen = 400
+            if len(orig_line) > maxlen:
+                orig_line = orig_line[:maxlen] + '...'
+            if len(cleaned_line) > maxlen:
+                cleaned_line = cleaned_line[:maxlen] + '...'
+            per_file["String Encryption"].append(
+                f"{filepath}: obf-line: {orig_line} -> deobf-line: {cleaned_line} ({c.get('reason','')})"
+            )
     except Exception as e:
         per_file["String Encryption"].append(f"{filepath}: Error - {e}")
+    # try:
+    #     str_cleaner = StringDecryptor()
+    #     str_changes, text = str_cleaner.detect_and_clean(text)
+
+    #     for c in str_changes:
+    #     # Extract context
+    #         orig_line = c.get('original_line', '').strip()
+    #         cleaned_line = c.get('cleaned_line', '').strip()
+    #         reason = c.get('reason', '').strip()
+
+    #     # Limit line lengths for readability
+    #         maxlen = 120
+    #         if len(orig_line) > maxlen:
+    #             orig_line = orig_line[:maxlen] + '...'
+    #         if len(cleaned_line) > maxlen:
+    #             cleaned_line = cleaned_line[:maxlen] + '...'
+
+    #     # Organize output for clarity
+    #         formatted_output = (
+    #             f"\n📄 File: {filepath}\n"
+    #             f" ├─ 🔹 Obfuscated Line : {orig_line}\n"
+    #             f" ├─ 🔸 Deobfuscated    : {cleaned_line}\n"
+    #             f" └─ 💬 Reason          : {reason}\n"
+    #         )
+
+    #         per_file["String Encryption"].append(formatted_output)
+
+    # except Exception as e:
+    #     per_file["String Encryption"].append(
+    #         f"\n📄 File: {filepath}\n └─ ❌ Error: {e}\n"
+    #     )
+
+
 
     # Identifier cleaner
     try:
